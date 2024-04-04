@@ -11,8 +11,8 @@ O site ERP acadêmico é uma plataforma dedicada à divulgação e gestão de mi
 - Thunder Client
 
 ## Tecnologias
-- ReactJS v18
-- Tailmind v3.0
+- Angular v17
+- Ionic v7
 - TypeScript v5.3.3
 - Laravel v10.0
 
