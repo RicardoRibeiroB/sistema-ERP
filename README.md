@@ -1,4 +1,3 @@
-# sistema-ERP-academico
 # Sistema-ERP-academico
 Site desenvolvido para ajudar microempreendedores para divulgar e gerenciar seu nogócio acadêmico.
 
