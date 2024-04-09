@@ -11,7 +11,6 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-<<<<<<< HEAD
   {
     path: 'clientes',
     loadChildren: () => import('./forms/clientes/clientes.module').then( m => m.ClientesPageModule)
@@ -20,14 +19,6 @@ const routes: Routes = [
     path: 'usuarios',
     loadChildren: () => import('./forms/usuarios/usuarios.module').then( m => m.UsuariosPageModule)
   },
-=======
-
-  {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },
-
->>>>>>> 9c59be357aaaa8a2cce5791632d656661ca43a5e
 ];
 
 @NgModule({
