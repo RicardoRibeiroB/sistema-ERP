@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 1px solid red;
+}
+.row{
+    display: flex;
+    width: 70%;
+    margin: 5% 5%;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    z-index: -1;
+}
+
+.registro{
+    z-index: 1;
+}

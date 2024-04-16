@@ -1,13 +1,24 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>usuarios</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">usuarios</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <div class="container">
+    <ion-row class="row">
+
+    <ion-col size="6" class="registro">  
+      <h2 class="bem-vindo">Bem Vindo!</h2>
+      <a href="#" class="novo-cadastro">Novo Login</a>
+      <ion-button class="btn-criar-conta">Criar Conta</ion-button>
+      <img src="../../../assets/img/astronauta tela de login.jpg" alt="Astronaura sentado na lua" width="360px" class="img-registro">
+    </ion-col>
+
+    <ion-col size="6" class="login">
+      <h2>Faça Seu Login</h2>
+      <ion-input type="email" class="ipt-login">E-mail</ion-input>
+      <ion-input type="passwod" class="ipt-login">Senha</ion-input>
+      <ion-button type="submit" class="btn-login">Entrar</ion-button>
+      <ion-checkbox class="chack-password">Lembrar senha</ion-checkbox>
+      <a href="#" class="fotgot-passwword">Esqueceu a senha?</a>
+    </ion-col>
+
+    </ion-row>
+  </div>
 </ion-content>
