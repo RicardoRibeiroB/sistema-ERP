@@ -3,22 +3,25 @@
     padding: 0;
     outline: 1px solid red;
 }
-.row{
-    display: flex;
-    width: 70%;
-    margin: 5% 5%;
-}
-
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-img{
-    z-index: -1;
-}
 
 .registro{
-    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.registro h2{
+    text-align: center;
+}
+
+.ipt-in{
+    height: 10px;
+    width: 150px;
+    border-radius: 10%;
+    background-color: rgba(255, 255, 255, 0.479);
+    font-size: 1.2em;
+}
+
+.localizacao{
+    display: flex;
+    margin-left: 35px;
 }
