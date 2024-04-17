@@ -1,23 +1,21 @@
 <ion-content [fullscreen]="true">
 
   <div class="container">
-    <ion-row class="row">
 
-    <ion-col size="6" class="registro">
-      <h2>Faça Seu Cadastro</h2>
-     <ion-input type="name" class="ipt-in">Nome</ion-input>
-     <ion-input type="email" class="ipt-in">E-mail</ion-input>
-     <ion-input type="password" class="ipt-in">Senha</ion-input>
-     <a href="#"><img src="../../../assets/img/pin-de-localizacao.png" width="15px" alt="Mostrar minha localização?" class="localizacao"
-    <ion-col size="6" class="login">
-      <h2>Faça Seu Login</h2>
-      <ion-input type="email" class="ipt-login">E-mail</ion-input>
-      <ion-input type="password" class="ipt-login">Senha</ion-input>
-      <ion-checkbox class="chack-password">Lembrar senha</ion-checkbox>
-      <a href="#" class="fotgot-passwword">Esqueceu a senha?</a>
-      <ion-button type="submit" class="btn-login">Entrar</ion-button>
-    </ion-col>
+    <ion-row>
 
+      <ion-col>
+        <h2>Faça Login</h2>
+        <ion-input type="email" placeholder="E-mail"></ion-input>
+        <ion-input type="password" placeholder="Senha"></ion-input>
+        <ion-checkbox labelPlacement="end">Lembrar Senha</ion-checkbox>
+        <a href="#">Esqueceu a Senha?</a><br/>
+        <ion-button type="submit">Entrar</ion-button>
+      </ion-col>
+
+      <ion-col></ion-col>
     </ion-row>
+
   </div>
+
 </ion-content>
