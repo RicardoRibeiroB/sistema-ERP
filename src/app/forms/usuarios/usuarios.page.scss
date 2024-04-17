@@ -1,5 +1,61 @@
 *{
     margin: 0;
     padding: 0;
-    // outline: 1px solid red;
+    outline: 1px solid red;
 }
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & .input-login{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.25);
+        border-radius: 50px;
+        margin: 5% 0;
+
+        & ion-input{
+            width: 60vh;
+            margin: 0 2%;
+        }
+        & img{
+            margin: 0 2%;
+        }
+    }
+    & .img-input{
+        width: auto;
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    & .check{
+        margin: 0 5%;
+        font-size: 1em;
+        color: white;
+    }
+
+    & a{
+        font-size: 1em;
+        color: rgba(121, 220, 242, 1);
+        text-decoration: none;
+    }
+
+    & .btn-login{
+        font-size: 1.2em;
+        font: 500 bolder;
+        color: black;
+        width: 150px;
+        padding: 10px;
+        --border-radius: 50px;
+        --background: rgba(121, 220, 242, 1);
+    }
+    
+}
+
+
+

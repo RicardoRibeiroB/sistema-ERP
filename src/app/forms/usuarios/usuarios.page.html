@@ -2,15 +2,21 @@
 
   <div class="container">
 
-    <ion-row>
+    <ion-row class="row">
 
-      <ion-col>
+      <ion-col class="login">
         <h2>Faça Login</h2>
-        <ion-input type="email" placeholder="E-mail"></ion-input>
-        <ion-input type="password" placeholder="Senha"></ion-input>
-        <ion-checkbox labelPlacement="end">Lembrar Senha</ion-checkbox>
+        <ion-row>
+          <!-- <ion-col size="1" class="img-login"><p><img src="../../../assets/img/e-mail.png" width="20px"> | </p></ion-col> -->
+          <ion-col size="6" class="input-login"><img src="../../../assets/img/e-mail.png" width="20px"><ion-input type="email" placeholder="E-mail"></ion-input></ion-col>
+        </ion-row>
+        <ion-row>
+          <!-- <ion-col size="1" class="img-login"><p><img src="../../../assets/img/senha.png" width="20px"> | </p></ion-col> -->
+          <ion-col size="6" class="input-login"><img src="../../../assets/img/senha.png" width="20px"><ion-input type="password" placeholder="Senha"></ion-input></ion-col>
+        </ion-row>
+        <ion-checkbox labelPlacement="end" class="check">Lembrar Senha</ion-checkbox>
         <a href="#">Esqueceu a Senha?</a><br/>
-        <ion-button type="submit">Entrar</ion-button>
+        <ion-button type="submit" class="btn-login">Entrar</ion-button>
       </ion-col>
 
       <ion-col></ion-col>
