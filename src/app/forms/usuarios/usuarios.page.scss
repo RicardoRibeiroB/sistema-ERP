@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // outline: 1px solid red;
+    outline: 1px solid red;
 }
 
 .img-saturno{
@@ -21,7 +21,7 @@
     background-image: url('../../../assets/img/Fundotelalogincadastro.jpg');
     color: white;
 
-    & .content{
+    & .first-content{
         border-radius: 15px;
         width: 960px;
         height: 70vh;
@@ -30,6 +30,7 @@
         position: relative;
         backdrop-filter: blur(8px);
         background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+        display: none;
     }
 
     & .first-column{
@@ -102,7 +103,7 @@
 
             & .ipt{
                 width: 78%;
-                margin-left: 20%;
+                margin-left: 15%;
             }
 
             & img{
@@ -127,10 +128,14 @@
         & .credenciais{
             margin-top: 0.5%;
             width: 60vh;
+            justify-content: space-between;
 
             & a{
                 color: #79DCF2;
                 text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
 
             & .check{
@@ -155,6 +160,148 @@
 
 
     & .second-content{
-        display: none;
+        border-radius: 15px;
+        width: 960px;
+        height: 78vh;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        backdrop-filter: blur(8px);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+        overflow: hidden;
+
+        & .first-content{
+            border-radius: 15px;
+            width: 960px;
+            height: 70vh;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            backdrop-filter: blur(8px);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+        }
+    
+        & .first-column{
+            position: relative;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+            border-radius: 20px;
+    
+            & .text{
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                top: 10%;
+    
+                & .texto1{
+                    margin-top: 2%;
+                }
+    
+                & .texto2{
+                    margin-top: 40%;
+                    margin-right: 40%;
+                    color: #0388A6;
+                    text-decoration: underline;
+                }
+    
+                & .button{
+                    margin-top: 35%;
+                    color: black;
+                    font-size: 1.2em;
+                    --border-radius: 30px; 
+                    --background: #79DCF2;
+                    
+                }
+                
+            }
+    
+            & .first-column, .image{
+                width: 100%;
+                height: 78vh;
+                position: relative;  
+                border-radius: 20px;
+                background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+                z-index: -1;
+            }
+        }
+    
+        & .second-column{
+            text-align: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+    
+            & .title{
+                margin-top: 3.5%;
+                margin-bottom: 3%;
+                font-size: 2em;
+                color: #0388A6;
+                text-transform: uppercase;
+            }
+    
+            & .input{
+                padding: 5px;
+                background-color: rgba(255,255,255,0.25);
+                border-radius: 50px;
+                margin: 3% 0;
+                width: 60%;
+                font-size: 1.3em;
+                color: white;
+                animation: none;
+    
+                & .ipt{
+                    width: 78%;
+                    margin-left: 15%;
+                }
+    
+                & img{
+                    position: absolute;
+                    margin-top: 1%;
+                    margin-left: 2%;
+                    width: 35px;
+                    color: white;
+                }
+    
+                & .barra-vertical::before{
+                    content: "|";
+                    display: inline-block;
+                    margin: 0 0.5em;
+                    color: white;
+                    position: absolute;
+                    margin-left: 10%;
+                    font-size: 1.5em;
+                }
+            }
+            
+            & .credenciais{
+                margin-top: 0.5%;
+                width: 60vh;
+                justify-content: space-between;
+    
+                & a{
+                    color: #79DCF2;
+                    text-decoration: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+    
+                & .check{
+                    margin: 0 5%;
+                    color: white;
+                }
+            }
+    
+            & .btn-input{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 5%;
+                --background: #79DCF2;
+                --border-radius: 30px;
+                color: black;
+                font-size: 1.2em;
+            }
+    
+        }
     }
 }

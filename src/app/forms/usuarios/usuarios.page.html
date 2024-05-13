@@ -34,18 +34,35 @@
     <div class="content second-content">
       <ion-row>
         <ion-col size="4" class="first-column">
-          <h2>Bem Vindo</h2>
-          <h2>Já Possui login?</h2>
-          <ion-button>Entrar</ion-button>
+          <img src="../../../assets/img/astronautateladelogin.jpg" class="image">
+          <div class="text">   
+            <h2 class="texto1">Bem Vindo</h2>
+            <h2 class="texto2">Já Possui login?</h2>
+            <ion-button class="button">Entrar</ion-button>
+          </div>
         </ion-col>
         <ion-col size="8" class="second-column">
-          <h2>Faça Cadastro</h2>
-          <ion-input class="input" type="text" placeholder="Nome"></ion-input>
-          <ion-input class="input" type="text" placeholder="Email"></ion-input>
-          <ion-input class="input" type="password" placeholder="Senha"></ion-input>
+          <h2 class="title">Faça Cadastro</h2>
+          <ion-row class="input">
+            <img src="../../../assets/img/usuario.png" alt="">
+              <span class="barra-vertical"></span>
+              <ion-input class="ipt" type="text" placeholder="Nome"></ion-input>
+            </ion-row>
+        <ion-row class="input">
+          <img src="../../../assets/img/e-mail.png" alt="">
+            <span class="barra-vertical"></span>
+            <ion-input class="ipt" type="text" placeholder="E-mail"></ion-input>
+          </ion-row>
+          <ion-row class="input">
+            <img src="../../../assets/img/e-mail.png" alt="">
+            <span class="barra-vertical"></span>
+            <ion-input class="ipt" type="password" placeholder="Senha"></ion-input>
+          </ion-row>
+          <ion-row class="credenciais">
           <a href="#"><img src="../../assets/img/pin-de-localizacao.png" alt="Pin de localização" width="20px">Localização</a>
           <ion-checkbox class="check">Lembrar Senha</ion-checkbox>
-          <ion-button>Cadastrar</ion-button>
+        </ion-row>
+          <ion-button class="btn-input">Cadastrar</ion-button>
         </ion-col>
       </ion-row>
     </div>
