@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.all{
+    height: 100%;
+    background: black url(../../../assets/img/../../assets/img/espaco-sideral-cliente.jpeg) center/cover no-repeat;
+    }
+.nav{
+    & img{
+        margin: 10px;
+    }
+}
+.conteudo{
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.526);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    & .side-img{
+        & img{
+            width: 100%;
+            height: auto; 
+        }
+    }
+    & .side-forms{
+        & .text-main{
+            margin-top: 20px;
+            margin-bottom: 50px;
+            & h1{
+                color: var(--ion-color-light);
+                font-size: 2.3em;        
+            }
+        }
+        & p{
+            color: var(--ion-color-light);
+            margin: 10px;
+            font-size: 1em;
+        }
+        & ion-input{
+            width: 90%;
+            height: 50px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: rgba(205, 180, 180, 0.25);
+            border-radius: 5px;
+        }
+        & ion-button{
+            background-color: var(--ion-color-dark);
+            color: var(--ion-color-light);
+            border-radius: 18px;
+        }
+    }
+}
