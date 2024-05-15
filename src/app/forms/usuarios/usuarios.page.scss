@@ -24,13 +24,13 @@
     & .first-content{
         border-radius: 15px;
         width: 960px;
-        height: 70vh;
+        // height: 78vh;
         justify-content: space-between;
         align-items: center;
         position: relative;
         backdrop-filter: blur(8px);
         background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
-        display: none;
+        overflow: hidden;
     }
 
     & .first-column{
@@ -67,7 +67,7 @@
 
         & .first-column, .image{
             width: 100%;
-            height: 70vh;
+            height: auto;
             position: relative;  
             border-radius: 20px;
             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
@@ -168,13 +168,14 @@
     & .second-content{
         border-radius: 15px;
         width: 960px;
-        height: 78vh;
+        // height: 78vh;
         justify-content: space-between;
         align-items: center;
         position: relative;
         backdrop-filter: blur(8px);
         background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
         overflow: hidden;
+        display: none;
 
         & .first-content{
             border-radius: 15px;
@@ -222,7 +223,7 @@
     
             & .first-column, .image{
                 width: 100%;
-                height: 78vh;
+                height: auto;
                 position: relative;  
                 border-radius: 20px;
                 background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
@@ -271,7 +272,7 @@
                     content: "|";
                     display: inline-block;
                     margin: 0 0.5em;
-                    color: white;
+                    color: rgba(255, 255, 255, 1);
                     position: absolute;
                     margin-left: 10%;
                     font-size: 1.5em;
