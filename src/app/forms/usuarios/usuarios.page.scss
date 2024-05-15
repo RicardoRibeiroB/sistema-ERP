@@ -39,7 +39,6 @@
         border-radius: 20px;
 
         & .text{
-
             position: absolute;
             text-align: center;
             width: 100%;
@@ -62,7 +61,6 @@
                 font-size: 1.2em;
                 --border-radius: 30px; 
                 --background: #79DCF2;
-                
             }
             
         }
@@ -77,12 +75,14 @@
         }
     }
 
+    // Segunda Div, onde abriga o formulário de Login
     & .second-column{
         text-align: center;
         align-items: center;
         display: flex;
         flex-direction: column;
 
+        // Estilização do Titulo do Formulário
         & .title{
             margin-top: 5%;
             margin-bottom: 5%;
@@ -91,6 +91,7 @@
             text-transform: uppercase;
         }
 
+        // Estilização do Input
         & .input{
             padding: 5px;
             background-color: rgba(255,255,255,0.25);
@@ -101,11 +102,13 @@
             color: white;
             animation: none;
 
+            // Proporções e posição do Input
             & .ipt{
                 width: 78%;
                 margin-left: 15%;
             }
 
+            // Imagem que está junto com o input
             & img{
                 position: absolute;
                 margin-top: 1%;
@@ -114,6 +117,7 @@
                 color: white;
             }
 
+            // Span que tem a barra vertical separando a imagem do input
             & .barra-vertical::before{
                 content: "|";
                 display: inline-block;
@@ -125,6 +129,7 @@
             }
         }
         
+        // Div que abriga o check-box e o link de recuperação de senha
         & .credenciais{
             margin-top: 0.5%;
             width: 60vh;
@@ -144,6 +149,7 @@
             }
         }
 
+        // Botão de Criar Cadastro
         & .btn-input{
             display: flex;
             justify-content: center;
@@ -157,7 +163,7 @@
 
     }
 
-
+    // Segunda Div ( Formulario de Cadastro)
 
     & .second-content{
         border-radius: 15px;
