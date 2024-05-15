@@ -132,7 +132,7 @@
         // Div que abriga o check-box e o link de recuperação de senha
         & .credenciais{
             margin-top: 0.5%;
-            width: 60vh;
+            width: 40vh;
             justify-content: space-between;
 
             & a{
@@ -175,7 +175,7 @@
         backdrop-filter: blur(8px);
         background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
         overflow: hidden;
-        display: none;
+        // display: none;
 
         & .first-content{
             border-radius: 15px;
