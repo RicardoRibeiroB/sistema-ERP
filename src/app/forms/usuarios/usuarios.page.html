@@ -1,95 +1,63 @@
 <ion-content [fullscreen]="true">
 
-  <img src="../../../assets/img/saturno_azul.png" alt="" class="img-saturno">
-  <!-- Inicio do formulário -->
-
-  <img src="../../../assets/img/saturno_azul.png"  alt="" class="img-saturno">
-
   <div class="container">
-    <!-- Inicio primeiro Content (login) -->
-    <div *ngIf="login" class="content first-content">
-      <ion-row>
-        <!-- Inicio promeira coluna (Saudações) -->
-        <ion-col size="4" class="first-column">
-          <img src="../../../assets/img/astronautateladelogin.jpg" class="image">
-          <div class="text">
-            <h2 class="texto1">Bem Vindo</h2>
-            <h1 class="texto2">Novo Login</h1>
-            <ion-button class="button" (click)="toggleDiv()">Criar Conta</ion-button>
-          </div>
-        </ion-col>
-        <!-- Fim da Primeira coluna (Saudações) -->
+    <img src="../../../assets/img/img-fundo.jpg" class="img-fundo">
+    <!-- Inicio Primeiro Content (Cadastro) -->
+    <div class="first-content">
+      <!-- Inicio Primeira Coluna (Cadastro) -->
+      <div class="first-column">
+        <img src="../../../assets/img/img-descricao.jpg" class="img-descricao">
+        <ion-row class="area">
+          <ion-col>
+            <a href="#">Área do Aluno</a>
+          </ion-col>
+        </ion-row>
+        <ion-row class="destaque">
+          <ion-col>
+            <p>Destacar os <br>Benefícios <br>do Nosso Site</p>
+          </ion-col>
+        </ion-row>
+        <ion-row class="sub-destaque">
+          <ion-col>
+            <p>Oferecemos pelo site, incentivando os alunos  a comunidade local a valorizar a experiência educacional personalizada e de alta qualidade que só o ensino presencial pode proporcionar.</p>
+          </ion-col>
+        </ion-row>
+      </div>
+      <!-- Fim Primeira Coluna (Cadastro) -->
 
-        <!-- Inicio da Segunda Coluna (Formulário de login) -->
-        <ion-col size="8" class="second-column">
-          <!-- titulo -->
-          <h2 class="title">Faça Login</h2>
+      <!-- Inicio Segunda Coluna (Cadastro) -->
+      <div class="second-column">
+        <ion-row class="titulo">
+          <ion-col size="12">
+            <h2>CADASTRO</h2>
+          </ion-col>
+        </ion-row>
+        <ion-row class="formulario">
+          <ion-col size=12>
+            <p>E-mail*</p>
+            <ion-input type="email"></ion-input>
 
-          <!-- Inicio Formulário (login) -->
-          <ion-row class="input">
-            <img src="../../../assets/img/e-mail.png" alt="">
-            <span class="barra-vertical"></span>
-            <ion-input class="ipt" type="text" placeholder="E-mail"></ion-input>
-          </ion-row>
-          <ion-row class="input">
-            <img src="../../../assets/img/senha.png" alt="">
-            <span class="barra-vertical"></span>
-            <ion-input class="ipt" type="password" placeholder="Senha"></ion-input>
-          </ion-row>
-          <ion-row class="credenciais">
-            <ion-checkbox class="check" labelPlacement="end">Lembrar Senha</ion-checkbox>
-            <a href="#">Esqueceu a Senha?</a>
-          </ion-row>
-          <ion-button class="btn-input">Entrar</ion-button>
-        </ion-col>
-      </ion-row>
-      <!-- Fim Formulário (login) -->
+            <p>Senha*</p>
+            <ion-input type="password"></ion-input>
+
+            <p>Confirmar Senha*</p>
+            <ion-input type="password"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="finalizar">
+          <ion-col size="12">
+            <ion-checkbox>Lembrar meu cadastro</ion-checkbox>
+            <ion-button>Cadastrar</ion-button>
+            <p>Cadastrar com</p>
+            <a href="#"><img src="../../../assets/img/logo-face.png" alt="Logo Facebook" width="40px"></a>
+            <a href="#"><img src="../../../assets/img/logo-google.png" alt="Logo Google" width="40px"></a>
+            <a href="#"><img src="../../../assets/img/logo-microsoft.png" alt="Logo logo-microsoft" width="40px"></a>
+          </ion-col>
+        </ion-row>
+      </div>
     </div>
-
-    <!-- Inicio Segundo content (Cadastro) -->
-    <div *ngIf="!login" class="content second-content">
-      <ion-row>
-        <!-- Inicio primeira Coluna (Saudações) -->
-        <ion-col size="4" class="first-column">
-          <img src="../../../assets/img/astronautateladelogin.jpg" class="image">
-          <div class="text">
-            <h2 class="texto1">Bem Vindo</h2>
-            <h2 class="texto2">Já Possui login?</h2>
-            <ion-button class="button" (click)="toggleDiv()">Entrar</ion-button>
-          </div>
-        </ion-col>
-        <!-- Fim primeira Coluna (Saudações) -->
-
-        <!-- Inicio segunda Coluna (Formulário) -->
-        <ion-col size="8" class="second-column">
-          <!-- Título -->
-          <h2 class="title">Faça Cadastro</h2>
-          <!-- Inicio Formulário (Cadastro) -->
-          <ion-row class="input">
-            <img src="../../../assets/img/usuario.png" alt="">
-            <span class="barra-vertical"></span>
-            <ion-input class="ipt" type="text" placeholder="Nome"></ion-input>
-          </ion-row>
-          <ion-row class="input">
-            <img src="../../../assets/img/e-mail.png" alt="">
-            <span class="barra-vertical"></span>
-            <ion-input class="ipt" type="text" placeholder="E-mail"></ion-input>
-          </ion-row>
-          <ion-row class="input">
-            <img src="../../../assets/img/e-mail.png" alt="">
-            <span class="barra-vertical"></span>
-            <ion-input class="ipt" type="password" placeholder="Senha"></ion-input>
-          </ion-row>
-          <ion-row class="credenciais">
-            <ion-checkbox class="check">Lembrar Senha</ion-checkbox>
-            <a href="#"><img src="../../assets/img/pin-de-localizacao.png" alt="Pin de localização"
-                width="20px">Localização</a>
-          </ion-row>
-          <ion-button class="btn-input">Cadastrar</ion-button>
-        </ion-col>
-      </ion-row>
-      <!-- Fim Formulário (Cadastro) -->
-    </div>
+    <!-- Fim Segunda Coluna (Cadastro) -->
   </div>
-  <!-- Fim div container (Fomulários) -->
+  <!-- Fim Primeiro Content (Cadastro) -->
+    
 </ion-content>
