@@ -1,14 +1,24 @@
+
 <ion-content [fullscreen]="true">
-  <ion-row>
-    <ion-col size="6">
-      <img src="../../assets/img/logo.png" width="50px">
-      <ion-input class="search" type="text" placeholder="O QUE VOCÊ QUER APRENDER?"></ion-input>
-    </ion-col>
-    <ion-col size="6">
-      <a href="#">Como Funciona</a>
-      <a href="#">Empresa</a>
-      <a href="#">Entrar</a>
-      <ion-button class="btn-matricula">Matriule-se</ion-button>
-    </ion-col>
+  <ion-row class="top-side">
+    <ion-row class="header">
+      <ion-col size="12">
+        <img src="#" alt="LOGO" class="logo">
+        <ion-button fill="clear">Início</ion-button>
+        <ion-button fill="clear">Sobre</ion-button>
+        <ion-button fill="clear">Serviços</ion-button>
+        <ion-button fill="clear">Como funciona?</ion-button>
+        <ion-button fill="clear" class="side-right" color="light">Buscar cursos</ion-button>
+        <ion-button fill="clear" color="light">Divulgue seu curso</ion-button>
+        <ion-button fill="solid" color="transparent" class="button-open">Cadastre-se</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="content-in-topside">
+      <ion-col size="12" class="text-in-top-side">
+        <h1>Descubra <br/> cursos <br/> presenciais <br/> de qualidade <br/> em nosso site <br/> e transforme <br/> seu futuro!</h1>
+        <p>Descubra cursos presenciais de alta qualidade <br/> em nossa plataforma educacional <br/> com instrutores especializados e ambientes <br/> inspiradores para transformar suas habilidades.</p>
+        <ion-button class="button-in-top-side">Começar</ion-button>
+      </ion-col>
+    </ion-row>
   </ion-row>
 </ion-content>
