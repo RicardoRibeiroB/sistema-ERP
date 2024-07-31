@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuariosPage implements OnInit {
 
+  activeDiv: string = 'div1';
+
   constructor() {  }
 
   ngOnInit() {
@@ -15,8 +17,8 @@ export class UsuariosPage implements OnInit {
 
   login: boolean = true;
 
-  toggleDiv(){
-    this.login = !this.login
+  showDiv(divId: string) {
+    this.activeDiv = divId;
   }
 
 }

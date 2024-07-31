@@ -16,7 +16,6 @@
         width: 100vw;
         height: 100vh;
         z-index: -1;
-        background-image: linear-gradient(rgba(3, 40, 89, 0.5), rgba(3, 40, 89, 0.5));
     }
     
     & .first-content{
@@ -30,31 +29,43 @@
             position: absolute;
             width: 75vh;
             height: 80vh;
+            // z-index: 1, -1;
         }
 
         & .first-column{
             position: relative;
             width: 75vh;
-            background-image: linear-gradient(rgba(3, 40, 89, 0.5), rgba(3, 40, 89, 0.5));
+            background-image: linear-gradient(rgba(3, 40, 89, 0.803), rgba(3, 40, 89, 0.808));
 
-            & .area{
+            & .pelicula{
+                position: absolute;
+                background-image: linear-gradient(rgba(3, 40, 89, 0.803), rgba(3, 40, 89, 0.808));
+                display: flex;
+                width: 75vh;
+                height: 80vh;
+            }
+
+            & .area a{
+                position: absolute;
                 margin: 2%;
+                width: 20vh;
                 color: white;
                 text-decoration: underline;
                }
 
             & .destaque{
+                position: absolute;
                 display: flex;
                 text-align: left;
-                margin:30% 6% 2%;
-                font-size: 2em;
+                margin:25% 6% 2%;
+                font-size: 2.5em;
                 width: 40vh;
                 color: white;
             }
 
             & .sub-destaque{
-                display: flex;
-                margin: 10% 6% 0;
+                // display: flex;
+                margin: 55% 6% 0;
                 width: 40vh;
                 color: white;
             }
@@ -62,6 +73,7 @@
 
         & .second-column{
             width: 75vh;
+            background-color: white;
 
             & .titulo{
                 display: flex;
@@ -106,13 +118,126 @@
                 }
 
                 & p{
-                    margin: 2%;
                     color: rgba(28, 146, 146, 1);
                     font: 500;
                 }
 
                 & a{
-                    margin: 2% 5%;
+                    text-decoration: none;
+                    margin: 0% 5%;
+                }
+            }
+        }
+    }
+
+    // Inicio Segunda div (login)
+    & .second-content{
+        display: flex;
+        width: 150vh;
+        height: 80vh;
+        background-color: white;
+
+        & .img-descricao{
+            display: flex;
+            position: absolute;
+            width: 75vh;
+            height: 80vh;
+            // z-index: 1, -1;
+        }
+
+        & .first-column{
+            position: relative;
+            width: 75vh;
+            background-image: linear-gradient(rgba(3, 40, 89, 0.803), rgba(3, 40, 89, 0.808));
+
+            & .pelicula{
+                position: absolute;
+                background-image: linear-gradient(rgba(3, 40, 89, 0.803), rgba(3, 40, 89, 0.808));
+                display: flex;
+                width: 75vh;
+                height: 80vh;
+            }
+
+            & .area a{
+                position: absolute;
+                margin: 2%;
+                width: 20vh;
+                color: white;
+                text-decoration: underline;
+               }
+
+            & .destaque{
+                position: absolute;
+                display: flex;
+                text-align: left;
+                margin:25% 6% 2%;
+                font-size: 2.5em;
+                width: 40vh;
+                color: white;
+            }
+
+            & .sub-destaque{
+                // display: flex;
+                margin: 65% 6% 0;
+                width: 40vh;
+                color: white;
+            }
+        }
+
+        & .second-column{
+            width: 75vh;
+            background-color: white;
+
+            & .titulo{
+                display: flex;
+                text-align: center;
+                margin: 15% 0 5%;
+                font-weight: bolder;
+                font: 700;
+                font-size: 1.8em;
+            }
+
+            & .formulario{
+                display: flex;
+                width: 45vh;
+                margin: 5% 20%;
+
+                & p{
+                    margin: 5% 0 2%;
+                    font: 700;
+                }
+
+                & ion-input{
+                    border-radius: 10px;
+                    background-color: rgba(217, 217, 217, 1);
+                }
+            }
+
+            & .finalizar{
+                display: flex;
+                text-align: center;
+
+                & ion-checkbox{
+                    display: flex;
+                    margin: 5% 23vh;
+                    width: 28vh;
+                }
+
+                & ion-button{
+                    display: flex;
+                    align-items: center;
+                    margin: 4% 25vh;
+                    --background: rgba(3, 40, 89, 1);
+                    width: 170px;
+                }
+
+                & p{
+                    font: 500;
+                }
+
+                & a{
+                    text-decoration: none;
+                    color: rgba(28, 146, 146, 1);
                 }
             }
         }

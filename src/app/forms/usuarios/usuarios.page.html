@@ -1,28 +1,30 @@
-
 <ion-content [fullscreen]="true">
 
   <div class="container">
     <img src="../../../assets/img/img-fundo.jpg" class="img-fundo">
     <!-- Inicio Primeiro Content (Cadastro) -->
-    <div class="first-content">
+    <div class="first-content" *ngIf="activeDiv === 'div1'">
       <!-- Inicio Primeira Coluna (Cadastro) -->
       <div class="first-column">
         <img src="../../../assets/img/img-descricao.jpg" class="img-descricao">
-        <ion-row class="area">
-          <ion-col>
-            <a href="#">Área do Aluno</a>
-          </ion-col>
-        </ion-row>
-        <ion-row class="destaque">
-          <ion-col>
-            <p>Destacar os <br>Benefícios <br>do Nosso Site</p>
-          </ion-col>
-        </ion-row>
-        <ion-row class="sub-destaque">
-          <ion-col>
-            <p>Oferecemos pelo site, incentivando os alunos  a comunidade local a valorizar a experiência educacional personalizada e de alta qualidade que só o ensino presencial pode proporcionar.</p>
-          </ion-col>
-        </ion-row>
+        <div class="pelicula">
+          <ion-row class="area">
+            <ion-col>
+              <a href="#">Área do Aluno</a>
+            </ion-col>
+          </ion-row>
+          <ion-row class="destaque">
+            <ion-col>
+              <p>Destacar os <br>Benefícios <br>do Nosso Site</p>
+            </ion-col>
+          </ion-row>
+          <ion-row class="sub-destaque">
+            <ion-col>
+              <p>Oferecemos pelo site, incentivando os alunos a comunidade local a valorizar a experiência educacional
+                personalizada e de alta qualidade que só o ensino presencial pode proporcionar.</p>
+            </ion-col>
+          </ion-row>
+        </div>
       </div>
       <!-- Fim Primeira Coluna (Cadastro) -->
 
@@ -30,7 +32,7 @@
       <div class="second-column">
         <ion-row class="titulo">
           <ion-col size="12">
-            <h2>CADASTRO</h2>
+            <p>CADASTRO</p>
           </ion-col>
         </ion-row>
         <ion-row class="formulario">
@@ -48,6 +50,7 @@
         <ion-row class="finalizar">
           <ion-col size="12">
             <ion-checkbox>Lembrar meu cadastro</ion-checkbox>
+            <p>Já possui cadastro?<a href="#" (click)="showDiv('div2'); $event.preventDefault()">Login</a></p>
             <ion-button>Cadastrar</ion-button>
             <p>Cadastrar com</p>
             <a href="#"><img src="../../../assets/img/logo-face.png" alt="Logo Facebook" width="40px"></a>
@@ -58,7 +61,64 @@
       </div>
     </div>
     <!-- Fim Segunda Coluna (Cadastro) -->
+    <!-- Fim Primeiro Content (Cadastro) -->
+
+    <!-- Inicio Segunda Coluna (Login) -->
+
+    <div class="second-content" *ngIf="activeDiv === 'div2'">
+      <!-- Inicio Primeira Coluna (Login) -->
+      <div class="first-column">
+        <img src="../../../assets/img/img-descricao.jpg" class="img-descricao">
+        <div class="pelicula">
+        <ion-row class="area">
+          <ion-col>
+            <a href="#">Área do Aluno</a>
+          </ion-col>
+        </ion-row>
+        <ion-row class="destaque">
+          <ion-col>
+            <p>Promover <br>as vantagens <br>das auals <br> presenciais</p>
+          </ion-col>
+        </ion-row>
+        <ion-row class="sub-destaque">
+          <ion-col>
+            <p>Em um mundo digitalizado, destacando a qualidade e a interação única que apenas o ensino presencial pode oferecer.</p>
+          </ion-col>
+        </ion-row>
+      </div>
+      </div>
+      <!-- Fim Primeira Coluna (Login) -->
+
+      <!-- Inicio Segunda Coluna (Login) -->
+      <div class="second-column">
+        <ion-row class="titulo">
+          <ion-col size="12">
+            <p>LOGIN</p>
+          </ion-col>
+        </ion-row>
+        <ion-row class="formulario">
+          <ion-col size=12>
+            <p>E-mail*</p>
+            <ion-input type="email"></ion-input>
+
+            <p>Senha*</p>
+            <ion-input type="password"></ion-input>
+
+          </ion-col>
+        </ion-row>
+        <ion-row class="finalizar">
+          <ion-col size="12">
+
+              <ion-checkbox>Lembrar minha senha</ion-checkbox>
+              <a href="#">Esqueceu a Senha?</a>
+            <ion-button>Entar</ion-button>
+              <p>Não tem uma conta? <a href="#" (click)="showDiv('div1'); $event.preventDefault()">Cadastre-se</a></p>
+
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
   </div>
-  <!-- Fim Primeiro Content (Cadastro) -->
-    
+
+
 </ion-content>
