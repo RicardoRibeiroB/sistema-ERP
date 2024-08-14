@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: 1px solid red;
 }
 .top-side{
   background: linear-gradient(to right, #fff 50%, #032859 50%);
@@ -38,6 +39,82 @@
         margin-top: 30px;
         font-size: 1.5em;
         margin-left: 100px;
+      }
+    }
+  }
+}
+
+.mid-side{
+  display: flex;
+
+  & .fundo{
+    display: flex;
+    background: #032859; 
+    // margin: 5%; 
+
+    & .card_matricula{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 15vh;
+
+      & .card{
+        margin: 12vh 0;
+        width: 40vh;
+        height: 50vh;
+
+        & .plano{
+          text-align: center;
+          margin: 5vh 0 ;
+          color: black;
+          font: 700;
+          font-size: 3.5em;
+        }
+
+        & .btn-card{
+          display: flex;
+          width: 20vh;
+          height: 5vh;
+          margin: 8vh 10vh;
+          border-radius: 10px;
+          --background: #032859;
+        }
+
+        & .desc{
+          display: flex;
+          margin: 2vh 4vh;
+          font-size: 2em;
+          color: black;
+        }
+      }
+
+      & .card_ultra{
+        width: 40vh;
+        height: 50vh;
+
+        & .plano{
+          text-align: center;
+          margin: 5vh 0 ;
+          color: black;
+          font: 700;
+          font-size: 3.5em;
+        }
+
+        & .btn-card{
+          display: flex;
+          width: 20vh;
+          height: 5vh;
+          margin: 8vh 10vh;
+          border-radius: 10px;
+          --background: #032859;
+        }
+
+        & .desc{
+          display: flex;
+          margin: 2vh 4vh;
+          font-size: 2em;
+          color: black;
+        }
       }
     }
   }
