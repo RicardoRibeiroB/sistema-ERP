@@ -58,14 +58,15 @@
                 display: flex;
                 text-align: left;
                 margin:25% 6% 2%;
-                font-size: 2.5em;
+                font-size: 3.5em;
                 width: 40vh;
                 color: white;
             }
 
             & .sub-destaque{
                 // display: flex;
-                margin: 55% 6% 0;
+                font-size: 1.2em;
+                margin: 60% 6% 0;
                 width: 40vh;
                 color: white;
             }
@@ -105,27 +106,32 @@
 
                 & ion-checkbox{
                     display: flex;
-                    margin: 2% 23vh;
-                    width: 28vh;
+                    margin: 2% 26vh;
+                    width: 20vh;
+                }
+
+                & .ja_cadastrado{
+                    margin-left: 25vh;
+                    width: 25vh;
                 }
 
                 & ion-button{
                     display: flex;
                     align-items: center;
-                    margin: 2% 25vh;
+                    margin: 2% 27vh;
                     --background: rgba(3, 40, 89, 1);
                     width: 170px;
                 }
 
-                & p{
-                    margin: 2% 0%;
+                & .outros_cadastros{
+                    margin: 2% 2%;
                     color: rgba(28, 146, 146, 1);
                     font: 500;
                 }
 
                 & a{
                     text-decoration: none;
-                    margin: 0% 5%;
+                    margin: 0% 7%;
                 }
             }
         }
@@ -220,14 +226,14 @@
 
                 & ion-checkbox{
                     display: flex;
-                    margin: 5% 23vh;
-                    width: 28vh;
+                    margin: 5% 26vh;
+                    width: 20vh;
                 }
 
                 & ion-button{
                     display: flex;
                     align-items: center;
-                    margin: 4% 25vh;
+                    margin: 4% 29vh;
                     --background: rgba(3, 40, 89, 1);
                     width: 170px;
                 }

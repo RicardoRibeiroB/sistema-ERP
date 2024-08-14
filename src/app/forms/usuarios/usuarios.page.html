@@ -49,10 +49,10 @@
         </ion-row>
         <ion-row class="finalizar">
           <ion-col size="12">
-            <ion-checkbox>Lembrar meu cadastro</ion-checkbox>
-            <p>Já possui cadastro?<a href="#" (click)="showDiv('div2'); $event.preventDefault()">Login</a></p>
+            <ion-checkbox labelPlacement="end">Lembrar meu cadastro</ion-checkbox>
+            <p class="ja_cadastrado">Já possui cadastro?<a href="#" (click)="showDiv('div2'); $event.preventDefault()">Login</a></p>
             <ion-button>Cadastrar</ion-button>
-            <p>Cadastrar com</p>
+            <p class="outros_cadastros">Cadastrar com</p>
             <a href="#"><img src="../../../assets/img/logo-face.png" alt="Logo Facebook" width="40px"></a>
             <a href="#"><img src="../../../assets/img/logo-google.png" alt="Logo Google" width="40px"></a>
             <a href="#"><img src="../../../assets/img/logo-microsoft.png" alt="Logo logo-microsoft" width="40px"></a>
@@ -109,7 +109,7 @@
         <ion-row class="finalizar">
           <ion-col size="12">
 
-              <ion-checkbox>Lembrar minha senha</ion-checkbox>
+              <ion-checkbox labelPlacement="end">Lembrar minha senha</ion-checkbox> 
               <a href="#">Esqueceu a Senha?</a>
             <ion-button>Entar</ion-button>
               <p>Não tem uma conta? <a href="#" (click)="showDiv('div1'); $event.preventDefault()">Cadastre-se</a></p>
