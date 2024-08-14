@@ -1,41 +1,50 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: 1px solid red;
 }
-.top-side{
+
+.top-side {
   background: linear-gradient(to right, #fff 50%, #032859 50%);
   height: 100vh;
-  .header{
+
+  .header {
     margin-top: 20px;
-    & img{
-      margin-left: 150px;
-      margin-right: 10px;
+
+    & img {
+      margin-left: 50px;
+      margin-right: 20px;
     }
-    & ion-button{
+
+    & ion-button {
       margin-left: 80px;
-      font-size: 1.3em;
+      font-size: 1em;
     }
-    & .button-open{
+
+    & .button-open {
       background-color: #79DCF2;
       border-radius: 15px;
       color: black;
       font-weight: bold;
     }
   }
-  .content-in-topside{
-    .text-in-top-side{
+
+  .content-in-topside {
+    .text-in-top-side {
       margin-left: 140px;
-      & h1{
-        font-size: 6em;
+
+      & h1 {
+        font-size: 4em;
       }
-      & p{
+
+      & p {
         margin-top: 20px;
         font-size: 1.4em;
         font-weight: bold;
       }
-      & .button-in-top-side{
+
+      & .button-in-top-side {
         margin-top: 30px;
         font-size: 1.5em;
         margin-left: 100px;
@@ -44,34 +53,34 @@
   }
 }
 
-.mid-side{
+.mid-side {
   display: flex;
 
-  & .fundo{
+  & .fundo {
     display: flex;
-    background: #032859; 
+    background: #032859;
     // margin: 5%; 
 
-    & .card_matricula{
+    & .card_matricula {
       display: flex;
       align-items: center;
       justify-content: center;
       margin-top: 15vh;
 
-      & .card{
+      & .card {
         margin: 12vh 0;
         width: 40vh;
         height: 50vh;
 
-        & .plano{
+        & .plano {
           text-align: center;
-          margin: 5vh 0 ;
+          margin: 5vh 0;
           color: black;
           font: 700;
           font-size: 3.5em;
         }
 
-        & .btn-card{
+        & .btn-card {
           display: flex;
           width: 20vh;
           height: 5vh;
@@ -80,7 +89,7 @@
           --background: #032859;
         }
 
-        & .desc{
+        & .desc {
           display: flex;
           margin: 2vh 4vh;
           font-size: 2em;
@@ -88,19 +97,19 @@
         }
       }
 
-      & .card_ultra{
+      & .card_ultra {
         width: 40vh;
         height: 50vh;
 
-        & .plano{
+        & .plano {
           text-align: center;
-          margin: 5vh 0 ;
+          margin: 5vh 0;
           color: black;
           font: 700;
           font-size: 3.5em;
         }
 
-        & .btn-card{
+        & .btn-card {
           display: flex;
           width: 20vh;
           height: 5vh;
@@ -109,11 +118,45 @@
           --background: #032859;
         }
 
-        & .desc{
+        & .desc {
           display: flex;
           margin: 2vh 4vh;
           font-size: 2em;
           color: black;
+
+          & .content-calling-people {
+            margin-top: 100px;
+            background-color: #032859;
+            height: 800px;
+
+            & .text {
+              width: 200px;
+
+              & .text-calling-people {
+                margin: 100px 30px 30px 30px;
+                font-size: 2.5em;
+                color: #fff;
+              }
+            }
+
+            & .img {
+              & .background-color-img {
+                margin-top: 150px;
+                margin-left: 100px;
+                width: 600px;
+                height: 400px;
+                background-color: #79DCF2;
+
+                & img {
+                  margin-left: 30px;
+                  margin-top: 20px;
+                  ;
+                  width: 550px;
+                  border-radius: 5px;
+                }
+              }
+            }
+          }
         }
       }
     }
