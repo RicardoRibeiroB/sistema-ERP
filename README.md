@@ -2,7 +2,7 @@
 Site desenvolvido para ajudar microempreendedores para divulgar e gerenciar seu nogócio acadêmico.
 
 ## Sobre
-O site ERP acadêmico é uma plataforma dedicada à divulgação e gestão de microempreendedores. Ele oferece ferramentas para promover os serviços dos microempreendedores, além de funcionalidades de gestão, como controle de alunos. Com uma interface amigável e intuitiva, o site facilita a interação entre microempreendedores e clientes, promovendo o crescimento e a visibilidade dos negócios.
+O site é dedicado à divulgação e gestão de microempreendedores. Ele oferece ferramentas para promover os serviços dos microempreendedores, além de funcionalidades de gestão, como controle de alunos. Com uma interface amigável e intuitiva, o site facilita a interação entre microempreendedores e clientes, promovendo o crescimento e a visibilidade dos negócios.
 
 ## Ferramenta
 - GIT 2.44.0
