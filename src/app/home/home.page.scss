@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  outline: 1px solid red; 
 }
 
 .top-side {
@@ -59,75 +60,112 @@
 }
 
 .mid-side {
-  & .fundo {
+
+  & .content-plans{
+
     display: flex;
-    background: #032859;
-    margin: 5%; 
-    & .card_matricula {
+    justify-content: center;
+    align-items: center;
+    
+    & .p{
+      text-align: start;
+    }
+
+    & .fundo{
+      margin: 20vh;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 15vh;
+      background: #032859;
+      width: 80vw;
+      height: 40vw;
+      border-radius: 10px;
 
-      & .card {
-        margin: 8vh 10vh 0 ;
-        width: 40vh;
+      & .card{
+        margin: 16% 5%;
         height: 50vh;
+        width: 40vh;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
 
-        & .plano {
+        & .plan{
           text-align: center;
-          margin: 5vh 0;
           color: black;
-          font: 700;
-          font-size: 3.5em;
+          font-weight: bold;
+          font-size: 3em;
+          margin: 8%;
         }
 
-        & .btn-card {
-          display: flex;
-          width: 20vh;
-          height: 5vh;
-          margin: 8vh 10vh;
-          border-radius: 10px;
+        & .btn-card{
+          height: 6vh;
+          width: 25vh;
+          margin: 5% 18%;
+          --border-radius: 10px;
           --background: #032859;
+          font-weight: bold;
+          font-size: 1.2em;
+          color: white;
         }
 
-        & .desc {
-          display: flex;
-          margin: 2vh 4vh;
-          font-size: 2em;
+        & .p{
+          font-size: 1.6em;
           color: black;
+          margin: 0% 10% 10% 10%;
+          font-weight: bolder;
+
+          & img{
+            width: 40px;
+            margin: 0% 5% 0 0;
+          }
         }
       }
+
+      
+        & .card_ultra{
+          margin: 10% 5%;
+          height: 60vh;
+          width: 40vh;
+          justify-content: center;
+          align-items: center;
+          border-radius: 10px;
+  
+          & .plan{
+            text-align: center;
+            color: black;
+            font-weight: bold;
+            font-size: 3em;
+            margin: 8%;
+          }
+  
+          & .btn-card{
+            height: 6vh;
+            width: 25vh;
+            margin: 5% 18%;
+            --border-radius: 10px;
+            --background: #032859;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: white;
+          }
+  
+          & .p{
+            font-size: 1.6em;
+            color: black;
+            margin: 5% 8%;
+            font-weight: bolder;
+
+            & ion-icon{
+              color: #4FEDE8;
+              font-weight: bolder;
+              font-size: 1.2em;
+              margin-top: 2%;
+            }
+          }
+        }
+
     }
+
   }
-  & .card_ultra {
-    width: 40vh;
-    height: 50vh;
 
-    & .plano {
-      text-align: center;
-      margin: 5vh 0;
-      color: black;
-      font: 700;
-      font-size: 3.5em;
-    }
-
-    & .btn-card {
-      display: flex;
-      width: 20vh;
-      height: 5vh;
-      margin: 8vh 10vh;
-      border-radius: 10px;
-      --background: #032859;
-    }
-
-    & .desc {
-      display: flex;
-      margin: 2vh 4vh;
-      font-size: 2em;
-      color: black;
-    }
-  }
   & .content-calling-people {
     margin-top: 100px;
     background-color: #032859;
