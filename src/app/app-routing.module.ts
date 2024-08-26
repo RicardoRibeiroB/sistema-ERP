@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'usuarios',
     loadChildren: () => import('./forms/usuarios/usuarios.module').then( m => m.UsuariosPageModule)
+  },  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
+
 ];
 
 @NgModule({
