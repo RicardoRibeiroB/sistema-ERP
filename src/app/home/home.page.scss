@@ -182,7 +182,7 @@
 
   & .content-calling-students{
     display: flex;
-    margin: 10% 0;
+    margin: 5% 0;
     justify-content: center;
     align-items: center;
 
@@ -192,7 +192,7 @@
       justify-content: center;
       align-items: center;
       width: 100vw;
-      height: 40vw;
+      height: 45vw;
 
       & .image-container {
         position: relative;
@@ -242,13 +242,10 @@
         }
 
         & .btn-matricula{
-          // display: flex;
           width: 20%;
           height: 20%;
           font-size: 1.5em;
           font-weight: bold;
-          // align-items: center;
-          // text-align: center;
           --background: #79DCF2;
           color: black;
           margin: 5% 0;
@@ -261,6 +258,7 @@
   & .content-calling-people {
     margin-top: 100px;
     background-color: #032859;
+    border-radius: 10px;
     height: 800px;
 
     & .text {
@@ -279,6 +277,7 @@
         margin-left: 100px;
         width: 600px;
         height: 400px;
+        border-radius: 10px;
         background-color: #79DCF2;
 
         & img {
