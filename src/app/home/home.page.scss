@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  outline: 1px solid red; 
+  // outline: 1px solid red; 
 }
 
 .top-side {
@@ -51,9 +51,10 @@
         margin-left: 100px;
       }
     }
+
     // & .img-top-side{
     //   & img{ 
-      
+
     //   }
     // }
   }
@@ -61,41 +62,43 @@
 
 .mid-side {
 
-  & .content-plans{
+  & .content-plans {
 
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    & .p{
+
+    & .p {
       text-align: start;
     }
 
-    & .fundo{
-      margin: 20vh;
+    & .fundo {
+      margin: 10vh;
       display: flex;
       background: #032859;
-      width: 80vw;
-      height: 40vw;
-      border-radius: 10px;
+      width: 90vw;
+      height: 45vw;
+      border-radius: 20px;
 
-      & .card{
-        margin: 16% 5%;
+      & .card {
+        margin: 18% 5%;
         height: 50vh;
-        width: 40vh;
+        width: 45vh;
         justify-content: center;
         align-items: center;
         border-radius: 10px;
 
-        & .plan{
+        & .plan {
           text-align: center;
           color: black;
           font-weight: bold;
           font-size: 3em;
           margin: 8%;
+          @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+          font-style: italic;
         }
 
-        & .btn-card{
+        & .btn-card {
           height: 6vh;
           width: 25vh;
           margin: 5% 18%;
@@ -106,64 +109,144 @@
           color: white;
         }
 
-        & .p{
-          font-size: 1.6em;
+        & .p {
+          display: flex;
+          font-size: 1.5em;
           color: black;
-          margin: 0% 10% 10% 10%;
+          margin: 5%;
           font-weight: bolder;
+          align-items: center;
 
-          & img{
-            width: 40px;
-            margin: 0% 5% 0 0;
+          & img {
+            width: 35px;
+            margin: 2% 5%;
           }
         }
       }
 
-      
-        & .card_ultra{
-          margin: 10% 5%;
-          height: 60vh;
-          width: 40vh;
-          justify-content: center;
-          align-items: center;
-          border-radius: 10px;
-  
-          & .plan{
-            text-align: center;
-            color: black;
-            font-weight: bold;
-            font-size: 3em;
-            margin: 8%;
-          }
-  
-          & .btn-card{
-            height: 6vh;
-            width: 25vh;
-            margin: 5% 18%;
-            --border-radius: 10px;
-            --background: #032859;
-            font-weight: bold;
-            font-size: 1.2em;
-            color: white;
-          }
-  
-          & .p{
-            font-size: 1.6em;
-            color: black;
-            margin: 5% 8%;
-            font-weight: bolder;
 
-            & ion-icon{
-              color: #4FEDE8;
-              font-weight: bolder;
-              font-size: 1.2em;
-              margin-top: 2%;
-            }
-          }
+      & .card_ultra {
+        margin: 10% 5%;
+        height: 65vh;
+        width: 55vh;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+
+        & .plan {
+          text-align: center;
+          color: black;
+          font-weight: bold;
+          font-size: 3em;
+          margin: 8%;
+          @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+          font-style: italic;
         }
 
-    }
+        & .btn-card {
+          height: 6vh;
+          width: 25vh;
+          margin: 5% 25%;
+          --border-radius: 10px;
+          --background: #032859;
+          font-weight: bold;
+          font-size: 1.2em;
+          color: white;
+        }
 
+        & .p {
+          display: flex;
+          font-size: 1.5em;
+          color: black;
+          margin: 3%;
+          font-weight: bolder;
+          align-items: center;
+
+          & img {
+            width: 35px;
+            margin: 2% 5%;
+          }
+        }
+      }
+    }
+  }
+
+  & .content-calling-students{
+    display: flex;
+    margin: 10% 0;
+    justify-content: center;
+    align-items: center;
+
+    & .calling-card{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 40vw;
+
+      & .image-container {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .image-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(3, 40, 89, 0.5);
+    }
+    
+
+      & .call-card{
+        position: absolute;
+        width: 80vw;
+        height: 20vw;
+        --background: linear-gradient(360deg, rgba(3, 40, 89, 1) 90%, rgba(121, 220, 242, 1)  10%);
+        background-size: 100% 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        & .title{
+          text-align: center;
+          margin-top: 3%;
+          color: white;
+          font-size: 3em;
+          font-weight: bold;
+        }
+
+        & .p{
+          text-align: center;
+          margin-top: 3%;
+          color: white;
+          font-size: 2.5em;
+        }
+
+        & .btn-matricula{
+          // display: flex;
+          width: 20%;
+          height: 20%;
+          font-size: 1.5em;
+          font-weight: bold;
+          // align-items: center;
+          // text-align: center;
+          --background: #79DCF2;
+          color: black;
+          margin: 5% 0;
+        }
+      }
+    }
+    
   }
 
   & .content-calling-people {
@@ -173,6 +256,7 @@
 
     & .text {
       width: 200px;
+
       & .text-calling-people {
         margin: 100px 30px 30px 30px;
         font-size: 2.5em;
@@ -198,21 +282,27 @@
       }
     }
   }
+
   // Crie o outro conteudo em baixo desse comentatio, cuidado quebrar o css dnv
-  & .content-calling-teachers{
+  & .content-calling-teachers {
     margin-top: 150px;
-    & .texts{
-      margin-top: 50px;;
-      & h1{
+
+    & .texts {
+      margin-top: 50px;
+      ;
+
+      & h1 {
         font-size: 5em;
         color: #032859;
       }
-      & p{
+
+      & p {
         margin-top: 20px;
         font-size: 1.2em;
         font-weight: bold;
       }
-      & ion-button{
+
+      & ion-button {
         margin-top: 20px;
         font-size: 2em;
         background-color: #79DCF2;
@@ -220,8 +310,10 @@
         text-transform: capitalize;
       }
     }
+
     & .img {
       margin-left: 90px;
+
       & .background-color-img {
         width: 630px;
         height: 450px;
@@ -235,31 +327,36 @@
         }
       }
     }
-  } 
+  }
 }
 
-.bottom-side{
+.bottom-side {
   background-color: #032859;
   margin-top: 300px;
   height: 200px;
-  & .footer-content{
+
+  & .footer-content {
     margin-left: 150px;
     width: 100%;
-    & h2{
+
+    & h2 {
       margin-top: 30px;
       color: white;
       font-size: 2em;
     }
-    & a{
-      & p{
+
+    & a {
+      & p {
         color: #595959;
         font-size: 1.3em
       }
     }
   }
-  & .footer-direct{
+
+  & .footer-direct {
     margin-top: 20px;
-    & p{
+
+    & p {
       font-size: 1.2em;
       color: white;
     }
