@@ -119,7 +119,7 @@ ion-content{
             // flex-direction: column;
 
             & ion-card{
-                height: 75vh;
+                height: 70vh;
                 width: 42vh;
                 display: flex;  
                 // flex-direction: column;
@@ -174,7 +174,7 @@ ion-content{
                     height: 5vh;
                     width: 30%;
                     display: flex;
-                    margin: 2% 5%;
+                    margin: 0% 5%;
                     align-items: center;
 
                     & img{
@@ -187,7 +187,7 @@ ion-content{
                     height: 5vh;
                     width: 35%;
                     display: flex;
-                    margin: 2% 5%;
+                    margin: -5% 5%;
                     align-items: center;
 
                     & img{
