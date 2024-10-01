@@ -82,11 +82,10 @@
 
   & .courses-premium {
     margin-top: 50px;
-    margin-left: 90px;
-    margin-right: 30px;
+    margin-left: 30px;
 
     & h1 {
-      font-size: 2.5em;
+      font-size: 3.5em;
       margin-bottom: 50px;
     }
 
@@ -108,6 +107,7 @@
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.438);
 
         & img {
           width: 100%;
@@ -138,6 +138,12 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          color: black;
+          font-weight: bold;
+        }
+        & ion-icon{
+          margin-top: 10px;
+          font-size: 1.3em;
         }
       }
     }
@@ -166,6 +172,84 @@
     & .swiper-button-next::after,
     & .swiper-button-prev::after {
       font-size: 18px;
+    }
+  }
+  & .courses-free {
+    margin-top: 50px;
+    margin-left: 50px;
+
+    & h1 {
+      font-size: 3.5em;
+      margin-bottom: 50px;
+    }
+      & ion-card {
+        height: 400px; 
+        width: 300px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.438);
+        margin-bottom: 30px;
+
+        & img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+
+        & ion-card-title {
+          font-size: 1.5em;
+          margin: 10px 0;
+        }
+        & ion-card-subtitle{
+          font-size: 1.3em;
+          margin-top: 10px;
+        }
+
+        & .price {
+          font-size: 1.7em;
+          margin: 10px 0;
+          color: black;
+          font-weight: bold;
+        }
+        & ion-icon{
+          margin-top: 10px;
+          font-size: 1.5em;
+        }
+      }
+    }
+}
+
+.bottom-side {
+  background-color: #032859;
+  margin-top: 100px;
+  height: 200px;
+
+  & .footer-content {
+    margin-left: 150px;
+    width: 100%;
+
+    & h2 {
+      margin-top: 30px;
+      color: white;
+      font-size: 2em;
+    }
+
+    & a {
+      & p {
+        color: #595959;
+        font-size: 1.3em
+      }
+    }
+  }
+
+  & .footer-direct {
+    margin-top: 20px;
+
+    & p {
+      font-size: 1.2em;
+      color: white;
     }
   }
 }
