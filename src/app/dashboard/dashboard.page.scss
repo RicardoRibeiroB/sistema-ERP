@@ -131,7 +131,8 @@ ion-content {
 
         & .atividade {
             display: flex;
-            // position: absolute;
+            position: absolute;
+            margin-left: 95vh;
             // flex-direction: column;
 
             & ion-card {

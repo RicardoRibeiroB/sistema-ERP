@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import Chart from 'chart.js/auto';
+import { Chart, registerables } from 'chart.js';
 
 
 @Component({
@@ -11,44 +11,37 @@ export class DashboardPage implements OnInit {
 
   constructor() { }
 
-  @ViewChild("meuCanvas", { static: true }) elemento!: ElementRef;
+    @ViewChild('myChart', { static: true }) chartRef!: ElementRef;
 
   ngOnInit() {
 
-    const config = {
-      type: 'bar',
-      data: ['Jan','Fev','Mar', 'Abr', 'Mar', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      },
-    };
+      Chart.register(...registerables);
+  
+      const ctx = this.chartRef.nativeElement.getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+          datasets: [
+            {
+              label: 'Vendas do Ano',
+              data: [12, 19, 3, 5, 8, 20, 10, 7, 14, 42, 33, 25],
+              backgroundColor: '#043259',
+              borderColor: '#04315969',
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    }
 
   }
 
-  //  public chartData = {
-  //    datasets: [
-  //      {
-  //        label: 'Vendas',
-  //        data: [10,20,30,40,50],
-  //        backgroundColor: 'rgba(54, 162, 235, 0.2)',
-  //        borderColor: 'rgba(54, 162, 235, 1)',
-  //        borderWidth: 1
-  //      }
-  //    ],
-  //    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
-  //  };
 
-  // public chartOptions = {
-  //   responsive: true,
-  //   scales:{
-  //     y: {
-  //       beginAtZero: true
-  //     }
-  //   }
-  // }
-
-}
