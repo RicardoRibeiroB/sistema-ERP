@@ -40,17 +40,121 @@
             <p>E-mail*</p>
             <ion-input type="email"></ion-input>
 
+
+            <!-- Modal para inserir localização -->
+
+            <!-- <div class="cidade">
+              <p>Cidade:</p>
+            <ion-input type="text"></ion-input>
+            
+            <ion-select interface="popover" placeholder="Selecione o estado">
+              <ion-select-option value="AC">Acre (AC)</ion-select-option>
+              <ion-select-option value="AL">Alagoas (AL)</ion-select-option>
+              <ion-select-option value="AP">Amapá (AP)</ion-select-option>
+              <ion-select-option value="AM">Amazonas (AM)</ion-select-option>
+              <ion-select-option value="BA">Bahia (BA)</ion-select-option>
+              <ion-select-option value="CE">Ceará (CE)</ion-select-option>
+              <ion-select-option value="DF">Distrito Federal (DF)</ion-select-option>
+              <ion-select-option value="ES">Espírito Santo (ES)</ion-select-option>
+              <ion-select-option value="GO">Goiás (GO)</ion-select-option>
+              <ion-select-option value="MA">Maranhão (MA)</ion-select-option>
+              <ion-select-option value="MT">Mato Grosso (MT)</ion-select-option>
+              <ion-select-option value="MS">Mato Grosso do Sul (MS)</ion-select-option>
+              <ion-select-option value="MG">Minas Gerais (MG)</ion-select-option>
+              <ion-select-option value="PA">Pará (PA)</ion-select-option>
+              <ion-select-option value="PB">Paraíba (PB)</ion-select-option>
+              <ion-select-option value="PR">Paraná (PR)</ion-select-option>
+              <ion-select-option value="PE">Pernambuco (PE)</ion-select-option>
+              <ion-select-option value="PI">Piauí (PI)</ion-select-option>
+              <ion-select-option value="RJ">Rio de Janeiro (RJ)</ion-select-option>
+              <ion-select-option value="RN">Rio Grande do Norte (RN)</ion-select-option>
+              <ion-select-option value="RS">Rio Grande do Sul (RS)</ion-select-option>
+              <ion-select-option value="RO">Rondônia (RO)</ion-select-option>
+              <ion-select-option value="RR">Roraima (RR)</ion-select-option>
+              <ion-select-option value="SC">Santa Catarina (SC)</ion-select-option>
+              <ion-select-option value="SP">São Paulo (SP)</ion-select-option>
+              <ion-select-option value="SE">Sergipe (SE)</ion-select-option>
+              <ion-select-option value="TO">Tocantins (TO)</ion-select-option>
+            </ion-select>
+
+            </div> -->
+
             <p>Senha*</p>
             <ion-input type="password"></ion-input>
 
             <p>Confirmar Senha*</p>
             <ion-input type="password"></ion-input>
+
+
+            <!-- Modal Localização -->
+            <ion-button id="open-modal" expand="block">Adicionar Localização</ion-button>
+            <ion-modal trigger="open-modal">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <ion-buttons slot="start">
+                      <ion-button (click)="cancel()">Cancel</ion-button>
+                    </ion-buttons>
+                  </ion-toolbar>
+                </ion-header>
+
+                <!-- <ion-content> -->
+                  <ion-item>
+                    <ion-input label="Cidade" label-placement="floating" placeholder="Insira o nome da Cidade (Ex: Xique Xique)" [(ngModel)]="cidade"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-input label="Bairro" label-placement="floating" placeholder="Insira o nome do Bairro (Ex: Centro)" [(ngModel)]="bairro"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-input label="Rua" label-placement="floating" placeholder="Insira o nome da Rua (Ex: Clodoaldo Avelino, 275)" [(ngModel)]="rua"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-input label="CEP" label-placement="floating" placeholder="Insira o CEP (Ex: 12345-678)" [(ngModel)]="cep"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-select interface="popover" placeholder="Selecione o estado">
+                      <ion-select-option value="AC">Acre (AC)</ion-select-option>
+                      <ion-select-option value="AL">Alagoas (AL)</ion-select-option>
+                      <ion-select-option value="AP">Amapá (AP)</ion-select-option>
+                      <ion-select-option value="AM">Amazonas (AM)</ion-select-option>
+                      <ion-select-option value="BA">Bahia (BA)</ion-select-option>
+                      <ion-select-option value="CE">Ceará (CE)</ion-select-option>
+                      <ion-select-option value="DF">Distrito Federal (DF)</ion-select-option>
+                      <ion-select-option value="ES">Espírito Santo (ES)</ion-select-option>
+                      <ion-select-option value="GO">Goiás (GO)</ion-select-option>
+                      <ion-select-option value="MA">Maranhão (MA)</ion-select-option>
+                      <ion-select-option value="MT">Mato Grosso (MT)</ion-select-option>
+                      <ion-select-option value="MS">Mato Grosso do Sul (MS)</ion-select-option>
+                      <ion-select-option value="MG">Minas Gerais (MG)</ion-select-option>
+                      <ion-select-option value="PA">Pará (PA)</ion-select-option>
+                      <ion-select-option value="PB">Paraíba (PB)</ion-select-option>
+                      <ion-select-option value="PR">Paraná (PR)</ion-select-option>
+                      <ion-select-option value="PE">Pernambuco (PE)</ion-select-option>
+                      <ion-select-option value="PI">Piauí (PI)</ion-select-option>
+                      <ion-select-option value="RJ">Rio de Janeiro (RJ)</ion-select-option>
+                      <ion-select-option value="RN">Rio Grande do Norte (RN)</ion-select-option>
+                      <ion-select-option value="RS">Rio Grande do Sul (RS)</ion-select-option>
+                      <ion-select-option value="RO">Rondônia (RO)</ion-select-option>
+                      <ion-select-option value="RR">Roraima (RR)</ion-select-option>
+                      <ion-select-option value="SC">Santa Catarina (SC)</ion-select-option>
+                      <ion-select-option value="SP">São Paulo (SP)</ion-select-option>
+                      <ion-select-option value="SE">Sergipe (SE)</ion-select-option>
+                      <ion-select-option value="TO">Tocantins (TO)</ion-select-option>
+                    </ion-select>
+                  </ion-item>
+
+                    <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+                  
+                <!-- </ion-content> -->
+              </ng-template>
+            </ion-modal>
           </ion-col>
         </ion-row>
         <ion-row class="finalizar">
           <ion-col size="12">
             <ion-checkbox labelPlacement="end">Lembrar meu cadastro</ion-checkbox>
-            <p class="ja_cadastrado">Já possui cadastro?<a href="#" (click)="showDiv('div2'); $event.preventDefault()">Login</a></p>
+            <p class="ja_cadastrado">Já possui cadastro?<a href="#"
+                (click)="showDiv('div2'); $event.preventDefault()">Login</a></p>
             <ion-button>Cadastrar</ion-button>
             <p class="outros_cadastros">Cadastrar com</p>
             <a href="#"><img src="../../../assets/img/logo-face.png" alt="Logo Facebook" width="40px"></a>
@@ -70,22 +174,23 @@
       <div class="first-column">
         <img src="../../../assets/img/img-descricao.jpg" class="img-descricao">
         <div class="pelicula">
-        <ion-row class="area">
-          <ion-col>
-            <a href="#">Área do Aluno</a>
-          </ion-col>
-        </ion-row>
-        <ion-row class="destaque">
-          <ion-col>
-            <p>Promover <br>as vantagens <br>das auals <br> presenciais</p>
-          </ion-col>
-        </ion-row>
-        <ion-row class="sub-destaque">
-          <ion-col>
-            <p>Em um mundo digitalizado, destacando a qualidade e a interação única que apenas o ensino presencial pode oferecer.</p>
-          </ion-col>
-        </ion-row>
-      </div>
+          <ion-row class="area">
+            <ion-col>
+              <a href="#">Área do Aluno</a>
+            </ion-col>
+          </ion-row>
+          <ion-row class="destaque">
+            <ion-col>
+              <p>Promover <br>as vantagens <br>das auals <br> presenciais</p>
+            </ion-col>
+          </ion-row>
+          <ion-row class="sub-destaque">
+            <ion-col>
+              <p>Em um mundo digitalizado, destacando a qualidade e a interação única que apenas o ensino presencial
+                pode oferecer.</p>
+            </ion-col>
+          </ion-row>
+        </div>
       </div>
       <!-- Fim Primeira Coluna (Login) -->
 
@@ -109,10 +214,10 @@
         <ion-row class="finalizar">
           <ion-col size="12">
 
-              <ion-checkbox labelPlacement="end">Lembrar minha senha</ion-checkbox> 
-              <a href="#">Esqueceu a Senha?</a>
+            <ion-checkbox labelPlacement="end">Lembrar minha senha</ion-checkbox>
+            <a href="#">Esqueceu a Senha?</a>
             <ion-button>Entar</ion-button>
-              <p>Não tem uma conta? <a href="#" (click)="showDiv('div1'); $event.preventDefault()">Cadastre-se</a></p>
+            <p>Não tem uma conta? <a href="#" (click)="showDiv('div1'); $event.preventDefault()">Cadastre-se</a></p>
 
           </ion-col>
         </ion-row>
