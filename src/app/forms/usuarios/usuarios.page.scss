@@ -110,51 +110,6 @@
                     width: 25vh;
                     text-align: center;
                 }
-
-                & ion-modal {
-
-                    & ng-template{
-                        
-                        & ion-item {
-                            margin-top: 5%;
-    
-                                & ion-input {
-                                    height: 0;
-                                    background-color: rgba(217, 217, 217, 1);
-                                    width: 50vh;
-                                 }
-    
-                                 & ion-button{
-                                    display: flex;
-                                    margin: 5% 10vh 0 10vh;
-                                    --background: rgba(3, 40, 89, 1);
-                                    --border-radius: 10px;
-                                    width: 25vh;
-                                    text-align: center;
-                                 }
-                        }
-                    }
-                }
-
-                // & .cidade{
-                //     display: flex;
-                //     align-items: center;
-                //     margin: 5%;
-
-                //     & p{
-                //         margin: 5% 5% 5% -5%;
-                //     }
-
-                //     & ion-select{
-                //         margin: 5%;
-                //         width: 20vw;
-                //     }
-
-                //     & ion-input{
-                //         width: 30vw;
-                //     }
-
-                // }
             }
 
             & .finalizar {
@@ -308,3 +263,38 @@
         }
     }
 }
+
+// Modal
+
+ion-modal{
+    --background: white;
+    & ion-toolbar{
+      --background: white;
+      --color: black;
+    }
+    & ion-content{
+
+      --background: white;
+      & ion-input{
+        display: flex;
+        margin: 4%;
+        font-size: 1.2em;
+        color: black;
+        border-radius: 10px;
+        width: 50vh;
+        background-color: rgba(217, 217, 217, 1);
+      }
+      & ion-select{
+        font-size: 1.3em;
+        color: black;
+      }
+      & ion-button{
+        color: white;
+        width: 30vh;
+        margin: 5% 10% 2% 25%;
+      }
+    }
+      
+    
+  }
+  
