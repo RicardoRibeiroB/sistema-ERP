@@ -14,7 +14,8 @@ const routes: Routes = [
   {
     path: 'usuarios',
     loadChildren: () => import('./forms/usuarios/usuarios.module').then( m => m.UsuariosPageModule)
-  },  {
+  },
+  {
     path: 'cliente-cadastro',
     loadChildren: () => import('./forms/clientes/cadastro/cliente-cadastro/cliente-cadastro.module').then( m => m.ClienteCadastroPageModule)
   },

@@ -26,31 +26,32 @@
         </ion-row>
         </ion-col>
       <ion-col size="6" class="side-right">
-        <form>
+        <form #inserir="ngForm" (ngSubmit)="adicionarProfessores(inserir.value)">
           <ion-row class="ion-justify-content-center">
             <ion-col size="12" class="area-title-form">
               <h1 class="text-title-form ion-text-center">Dados Cadastrais</h1>
             </ion-col>
             <ion-col size="8" class="area-input-form">
-              <ion-input type="text" id="name">Nome: </ion-input>
+              <ion-input type="text" id="name" [(ngModel)]="nome" name="nome" placeholder="Nome"></ion-input>
             </ion-col>
             <ion-col size="8" class="area-input-form">
-              <ion-input type="text" id="name-company">Nome da empresa: </ion-input>
+              <ion-input type="text" id="name-company" [(ngModel)]="nomeEmpresa" name="nomeEmpresa" placeholder="Nome da empresa"></ion-input>
             </ion-col>
             <ion-col size="8" class="area-input-form">
-              <ion-input type="email" id="email">Email: </ion-input>
+              <ion-input type="email" id="email" [(ngModel)]="email" name="email" placeholder="Email"></ion-input>
             </ion-col>
             <ion-col size="8" class="area-input-form">
-              <ion-input type="password" id="password">Senha: </ion-input>
+              <ion-input type="password" id="password" [(ngModel)]="senha" name="senha" placeholder="Senha"></ion-input>
             </ion-col>
             <ion-col size="8" class="area-checkbox-form ion-text-center">
-              <ion-checkbox labelPlacement="end">Lembrar meu cadastro</ion-checkbox>
+              <ion-checkbox [(ngModel)]="lembrarCadastro" name="lembrarCadastro" labelPlacement="end">Lembrar meu cadastro</ion-checkbox>
             </ion-col>
             <ion-col size="5" class="area-button-form">
-              <ion-button expand="full" shape="round" color="transparent">Cadastrar</ion-button>
+              <ion-button expand="full" shape="round" color="transparent" type="submit">Cadastrar</ion-button>
             </ion-col>
           </ion-row>
         </form>
+        
       </ion-col>
        </ion-row>
       </ion-col>

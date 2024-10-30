@@ -26,19 +26,19 @@
         </ion-row>
         </ion-col>
       <ion-col size="6" class="side-right">
-        <form>
+        <form #buscar="ngForm" (ngSubmit)="logar(buscar.value)">
           <ion-row class="ion-justify-content-center">
             <ion-col size="12" class="area-title-form">
               <h1 class="text-title-form ion-text-center">Faça seu login</h1>
             </ion-col>
             <ion-col size="8" class="area-input-form">
-              <ion-input type="email" id="email">Email: </ion-input>
+              <ion-input type="email" id="email" name="email" [(ngModel)]="user.email" placeholder="Email"></ion-input>
             </ion-col>
             <ion-col size="8" class="area-input-form">
-              <ion-input type="password" id="password">Senha: </ion-input>
+              <ion-input type="password" id="password" name="senha" [(ngModel)]="user.senha" placeholder="Senha"></ion-input>
             </ion-col>
             <ion-col size="5" class="area-checkbox-form">
-              <ion-checkbox labelPlacement="end">Lembrar minha senha</ion-checkbox>
+              <ion-checkbox [(ngModel)]="lembrarSenha" name="lembrarSenha" labelPlacement="end">Lembrar minha senha</ion-checkbox>
             </ion-col>
             <ion-col size="3" class="area-dontrememberPassword-form">
               <a href="#">Esqueceu a senha?</a>
@@ -47,7 +47,7 @@
               <p>Não tem conta? <a href="#">Cadastre aqui</a></p>
             </ion-col>
             <ion-col size="5" class="area-button-form">
-              <ion-button expand="full" shape="round" color="transparent">Entrar</ion-button>
+              <ion-button expand="full" shape="round" color="transparent" type="submit">Entrar</ion-button>
             </ion-col>
           </ion-row>
         </form>
