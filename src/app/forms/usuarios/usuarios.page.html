@@ -40,114 +40,15 @@
             <p>E-mail*</p>
             <ion-input type="email"></ion-input>
 
-
-            <!-- Modal para inserir localização -->
-
-            <!-- <div class="cidade">
-              <p>Cidade:</p>
-            <ion-input type="text"></ion-input>
-            
-            <ion-select interface="popover" placeholder="Selecione o estado">
-              <ion-select-option value="AC">Acre (AC)</ion-select-option>
-              <ion-select-option value="AL">Alagoas (AL)</ion-select-option>
-              <ion-select-option value="AP">Amapá (AP)</ion-select-option>
-              <ion-select-option value="AM">Amazonas (AM)</ion-select-option>
-              <ion-select-option value="BA">Bahia (BA)</ion-select-option>
-              <ion-select-option value="CE">Ceará (CE)</ion-select-option>
-              <ion-select-option value="DF">Distrito Federal (DF)</ion-select-option>
-              <ion-select-option value="ES">Espírito Santo (ES)</ion-select-option>
-              <ion-select-option value="GO">Goiás (GO)</ion-select-option>
-              <ion-select-option value="MA">Maranhão (MA)</ion-select-option>
-              <ion-select-option value="MT">Mato Grosso (MT)</ion-select-option>
-              <ion-select-option value="MS">Mato Grosso do Sul (MS)</ion-select-option>
-              <ion-select-option value="MG">Minas Gerais (MG)</ion-select-option>
-              <ion-select-option value="PA">Pará (PA)</ion-select-option>
-              <ion-select-option value="PB">Paraíba (PB)</ion-select-option>
-              <ion-select-option value="PR">Paraná (PR)</ion-select-option>
-              <ion-select-option value="PE">Pernambuco (PE)</ion-select-option>
-              <ion-select-option value="PI">Piauí (PI)</ion-select-option>
-              <ion-select-option value="RJ">Rio de Janeiro (RJ)</ion-select-option>
-              <ion-select-option value="RN">Rio Grande do Norte (RN)</ion-select-option>
-              <ion-select-option value="RS">Rio Grande do Sul (RS)</ion-select-option>
-              <ion-select-option value="RO">Rondônia (RO)</ion-select-option>
-              <ion-select-option value="RR">Roraima (RR)</ion-select-option>
-              <ion-select-option value="SC">Santa Catarina (SC)</ion-select-option>
-              <ion-select-option value="SP">São Paulo (SP)</ion-select-option>
-              <ion-select-option value="SE">Sergipe (SE)</ion-select-option>
-              <ion-select-option value="TO">Tocantins (TO)</ion-select-option>
-            </ion-select>
-
-            </div> -->
-
             <p>Senha*</p>
             <ion-input type="password"></ion-input>
 
             <p>Confirmar Senha*</p>
             <ion-input type="password"></ion-input>
 
+            <ion-button (click)="setOpen(true)">Adicionar Endereço</ion-button>
 
             <!-- Modal Localização -->
-            <ion-button id="open-modal" expand="block">Adicionar Localização</ion-button>
-            <ion-modal trigger="open-modal">
-              <ng-template>
-                <ion-header>
-                  <ion-toolbar>
-                    <ion-buttons slot="start">
-                      <ion-button (click)="cancel()">Cancel</ion-button>
-                    </ion-buttons>
-                  </ion-toolbar>
-                </ion-header>
-
-                <!-- <ion-content> -->
-                  <ion-item>
-                    <ion-input label="Cidade" label-placement="floating" placeholder="Insira o nome da Cidade (Ex: Xique Xique)" [(ngModel)]="cidade"></ion-input>
-                  </ion-item>
-                  <ion-item>
-                    <ion-input label="Bairro" label-placement="floating" placeholder="Insira o nome do Bairro (Ex: Centro)" [(ngModel)]="bairro"></ion-input>
-                  </ion-item>
-                  <ion-item>
-                    <ion-input label="Rua" label-placement="floating" placeholder="Insira o nome da Rua (Ex: Clodoaldo Avelino, 275)" [(ngModel)]="rua"></ion-input>
-                  </ion-item>
-                  <ion-item>
-                    <ion-input label="CEP" label-placement="floating" placeholder="Insira o CEP (Ex: 12345-678)" [(ngModel)]="cep"></ion-input>
-                  </ion-item>
-                  <ion-item>
-                    <ion-select interface="popover" placeholder="Selecione o estado">
-                      <ion-select-option value="AC">Acre (AC)</ion-select-option>
-                      <ion-select-option value="AL">Alagoas (AL)</ion-select-option>
-                      <ion-select-option value="AP">Amapá (AP)</ion-select-option>
-                      <ion-select-option value="AM">Amazonas (AM)</ion-select-option>
-                      <ion-select-option value="BA">Bahia (BA)</ion-select-option>
-                      <ion-select-option value="CE">Ceará (CE)</ion-select-option>
-                      <ion-select-option value="DF">Distrito Federal (DF)</ion-select-option>
-                      <ion-select-option value="ES">Espírito Santo (ES)</ion-select-option>
-                      <ion-select-option value="GO">Goiás (GO)</ion-select-option>
-                      <ion-select-option value="MA">Maranhão (MA)</ion-select-option>
-                      <ion-select-option value="MT">Mato Grosso (MT)</ion-select-option>
-                      <ion-select-option value="MS">Mato Grosso do Sul (MS)</ion-select-option>
-                      <ion-select-option value="MG">Minas Gerais (MG)</ion-select-option>
-                      <ion-select-option value="PA">Pará (PA)</ion-select-option>
-                      <ion-select-option value="PB">Paraíba (PB)</ion-select-option>
-                      <ion-select-option value="PR">Paraná (PR)</ion-select-option>
-                      <ion-select-option value="PE">Pernambuco (PE)</ion-select-option>
-                      <ion-select-option value="PI">Piauí (PI)</ion-select-option>
-                      <ion-select-option value="RJ">Rio de Janeiro (RJ)</ion-select-option>
-                      <ion-select-option value="RN">Rio Grande do Norte (RN)</ion-select-option>
-                      <ion-select-option value="RS">Rio Grande do Sul (RS)</ion-select-option>
-                      <ion-select-option value="RO">Rondônia (RO)</ion-select-option>
-                      <ion-select-option value="RR">Roraima (RR)</ion-select-option>
-                      <ion-select-option value="SC">Santa Catarina (SC)</ion-select-option>
-                      <ion-select-option value="SP">São Paulo (SP)</ion-select-option>
-                      <ion-select-option value="SE">Sergipe (SE)</ion-select-option>
-                      <ion-select-option value="TO">Tocantins (TO)</ion-select-option>
-                    </ion-select>
-                  </ion-item>
-
-                    <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
-                  
-                <!-- </ion-content> -->
-              </ng-template>
-            </ion-modal>
           </ion-col>
         </ion-row>
         <ion-row class="finalizar">
@@ -224,9 +125,71 @@
       </div>
     </div>
   </div>
-
-
 </ion-content>
+
+
+<ion-modal [isOpen]="isModalOpen">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpen(false)">Cancelar</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+   <ion-content>
+    <ion-item>
+      <p>Cidade:</p>
+      <ion-input label-placement="floating" placeholder="Insira o nome da Cidade (Ex: Xique Xique)" [(ngModel)]="cidade"></ion-input>
+    </ion-item>
+    <ion-item>
+      <p>Bairro:</p>
+      <ion-input label-placement="floating" placeholder="Insira o nome do Bairro (Ex: Centro)" [(ngModel)]="bairro"></ion-input>
+    </ion-item>
+    <ion-item>
+      <p>Rua:</p>
+      <ion-input label-placement="floating" placeholder="Insira o nome da Rua (Ex: Clodoaldo Avelino, 275)" [(ngModel)]="rua"></ion-input>
+    </ion-item>
+    <ion-item>
+      <p>Cep:</p>
+      <ion-input label-placement="floating" placeholder="Insira o CEP (Ex: 12345-678)" [(ngModel)]="cep" type="number" maxlength="8"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-select interface="popover" placeholder="Selecione o estado">
+        <ion-select-option value="AC">Acre (AC)</ion-select-option>
+        <ion-select-option value="AL">Alagoas (AL)</ion-select-option>
+        <ion-select-option value="AP">Amapá (AP)</ion-select-option>
+        <ion-select-option value="AM">Amazonas (AM)</ion-select-option>
+        <ion-select-option value="BA">Bahia (BA)</ion-select-option>
+        <ion-select-option value="CE">Ceará (CE)</ion-select-option>
+        <ion-select-option value="DF">Distrito Federal (DF)</ion-select-option>
+        <ion-select-option value="ES">Espírito Santo (ES)</ion-select-option>
+        <ion-select-option value="GO">Goiás (GO)</ion-select-option>
+        <ion-select-option value="MA">Maranhão (MA)</ion-select-option>
+        <ion-select-option value="MT">Mato Grosso (MT)</ion-select-option>
+        <ion-select-option value="MS">Mato Grosso do Sul (MS)</ion-select-option>
+        <ion-select-option value="MG">Minas Gerais (MG)</ion-select-option>
+        <ion-select-option value="PA">Pará (PA)</ion-select-option>
+        <ion-select-option value="PB">Paraíba (PB)</ion-select-option>
+        <ion-select-option value="PR">Paraná (PR)</ion-select-option>
+        <ion-select-option value="PE">Pernambuco (PE)</ion-select-option>
+        <ion-select-option value="PI">Piauí (PI)</ion-select-option>
+        <ion-select-option value="RJ">Rio de Janeiro (RJ)</ion-select-option>
+        <ion-select-option value="RN">Rio Grande do Norte (RN)</ion-select-option>
+        <ion-select-option value="RS">Rio Grande do Sul (RS)</ion-select-option>
+        <ion-select-option value="RO">Rondônia (RO)</ion-select-option>
+        <ion-select-option value="RR">Roraima (RR)</ion-select-option>
+        <ion-select-option value="SC">Santa Catarina (SC)</ion-select-option>
+        <ion-select-option value="SP">São Paulo (SP)</ion-select-option>
+        <ion-select-option value="SE">Sergipe (SE)</ion-select-option>
+        <ion-select-option value="TO">Tocantins (TO)</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button (click)="setOpen(false)">Salvar</ion-button>
+   </ion-content>
+  </ng-template>
+</ion-modal>
 
 
 
