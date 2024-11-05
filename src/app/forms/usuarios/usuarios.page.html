@@ -103,7 +103,7 @@
           <div class="second-column">
             <ion-row class="titulo">
               <ion-col size="12">
-                <p>CADASTRO</p>
+                <p>Login</p>
               </ion-col>
             </ion-row>
             <ion-row class="formulario">
@@ -114,17 +114,13 @@
                 <p>Senha*</p>
                 <ion-input type="password" [(ngModel)]="aluno.senha" name="senha" placeholder="Digite sua senha"></ion-input>
         
-                <p>Confirmar Senha*</p>
-                <ion-input type="password" [(ngModel)]="aluno.confirmarSenha" name="confirmarSenha" placeholder="Confirme sua senha"></ion-input>
-        
-                <ion-button (click)="setOpen(true)" [(ngModel)]="aluno.localizacao">Adicionar Endereço</ion-button>
               </ion-col>
             </ion-row>
             <ion-row class="finalizar">
               <ion-col size="12">
                 <ion-checkbox [(ngModel)]="aluno.lembrarCadastro" name="lembrarCadastro" labelPlacement="end">Lembrar meu cadastro</ion-checkbox>
                 <p class="ja_cadastrado">Já possui cadastro?
-                  <a href="#" (click)="showDiv('div2'); $event.preventDefault()">Login</a>
+                  <a href="#" (click)="showDiv('div1'); $event.preventDefault()">Login</a>
                 </p>
                 <ion-button type="submit">Cadastrar</ion-button>
                 <p class="outros_cadastros">Cadastrar com</p>
