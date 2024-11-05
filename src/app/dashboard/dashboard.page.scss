@@ -219,22 +219,32 @@
       --color: black;
     }
     & ion-content{
+      margin: 5%;
       --background: white;
-      & ion-input{
-        font-size: 1.6em;
+
+      & p{
         color: black;
-        border-bottom: 1px solid black;
+        font-size: 1.2em;
+        font-weight: 500;
+      }
+
+      & ion-input{
+        display: flex;
+        margin: 4%;
+        font-size: 1.2em;
+        color: black;
+        border-radius: 10px;
+        width: 50vh;
+        background-color: rgba(217, 217, 217, 1);
       }
       & ion-select{
-        font-size: 2em;
+        font-size: 1.3em;
         color: black;
-        border-bottom: 1px solid black;
       }
-      & ion-textarea{
-        margin-top: 20px;
-        font-size: 1.6em;
-        color: black;
-        border-bottom: 1px solid black;
+      & ion-button{
+        color: white;
+        width: 30vh;
+        margin: 5% 10% 2% 25%;
       }
     }
       
