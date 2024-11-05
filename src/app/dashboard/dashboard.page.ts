@@ -48,6 +48,38 @@ export class DashboardPage implements OnInit {
     this.isModalOpen = isOpen;
   }
 
+  curso ={
+    nomeCurso: '',
+    category: '',
+    price: '',
+    description: '',
+    image: false,
+  }
+
+
+  adicionarCursos(){
+    console.log(this.curso);
+    // fetch('http://localhost/',
+    // {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(cursos)
+    // })
+    // .then(resp => resp.json())
+    // .then(resp=> {
+     
+    //   console.log(resp);
+    // })
+    // .catch(erro => {
+    //   console.log(erro);
+    // })
+    // .finally(()=>{   
+    //   console.log('processo finalizado');
+    // })
+  }
+
   }
 
 
