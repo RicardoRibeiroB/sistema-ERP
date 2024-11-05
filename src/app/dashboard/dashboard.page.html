@@ -176,28 +176,26 @@
     </ion-header>
    <ion-content>
     <ion-row class="conteudo-modal">
-      <form #inserir="ngForm" (ngSubmit)="adicionarCursos(inserir.value)">
         <ion-col size="12">
-          <ion-input label="Nome do curso" labelPlacement="floating" placeholder="Digite o nome do Curso" [(ngModel)]="nomeCurso"></ion-input>
+          <ion-input label="Nome do curso" labelPlacement="floating" placeholder="Digite o nome do Curso" [(ngModel)]="curso.nomeCurso"></ion-input>
         </ion-col>
         <ion-col size="12">
-          <ion-select label="Categoria do curso" label-placement="stacked">
+          <ion-select label="Categoria do curso" label-placement="stacked" [(ngModel)]="curso.category">
             <ion-select-option value="apple">Programação</ion-select-option>
           </ion-select> 
         </ion-col>
         <ion-col size="12">
-          <ion-input label="Preço do curso" labelPlacement="floating" placeholder="Digite o preço do curso" type="number" [(ngModel)]="price"></ion-input>
+          <ion-input label="Preço do curso" labelPlacement="floating" placeholder="Digite o preço do curso" type="number" [(ngModel)]="curso.price"></ion-input>
         </ion-col>
         <ion-col size="12">
-          <ion-textarea label="Descrição do curso" labelPlacement="floating" placeholder="Digite uma breve descrição do curso" [(ngModel)]="description"></ion-textarea>
+          <ion-textarea label="Descrição do curso" labelPlacement="floating" placeholder="Digite uma breve descrição do curso" [(ngModel)]="curso.description"></ion-textarea>
         </ion-col>
         <ion-col size="12">
-          <ion-input label="Imagem do curso" type="file" [(ngModel)]="image"></ion-input>
+          <ion-input label="Imagem do curso" type="file" [(ngModel)]="curso.image"></ion-input>
         </ion-col>
         <ion-col size="12">
-          <ion-button type="submit">Cadastrar</ion-button>
+          <ion-button type="submit" (click)="adicionarCursos()">Cadastrar</ion-button>
         </ion-col>
-      </form>
     </ion-row>
    </ion-content>
   </ng-template>

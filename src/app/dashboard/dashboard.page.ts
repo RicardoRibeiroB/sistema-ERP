@@ -48,15 +48,17 @@ export class DashboardPage implements OnInit {
     this.isModalOpen = isOpen;
   }
 
-nomeCurso: string = '';
-category: string = '';
-price: string = '';
-description: string = '';
-image: boolean = false;
+  curso ={
+    nomeCurso: '',
+    category: '',
+    price: '',
+    description: '',
+    image: false,
+  }
 
-  adicionarCursos(form: any){
-    let cursos = form;
-    console.log(form);
+
+  adicionarCursos(){
+    console.log(this.curso);
     // fetch('http://localhost/',
     // {
     //   method: 'POST',
