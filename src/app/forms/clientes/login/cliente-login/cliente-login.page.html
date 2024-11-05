@@ -26,7 +26,6 @@
         </ion-row>
         </ion-col>
       <ion-col size="6" class="side-right">
-        <form #buscar="ngForm" (ngSubmit)="logar(buscar.value)">
           <ion-row class="ion-justify-content-center">
             <ion-col size="12" class="area-title-form">
               <h1 class="text-title-form ion-text-center">Faça seu login</h1>
@@ -47,10 +46,9 @@
               <p>Não tem conta? <a href="#">Cadastre aqui</a></p>
             </ion-col>
             <ion-col size="5" class="area-button-form">
-              <ion-button expand="full" shape="round" color="transparent" type="submit">Entrar</ion-button>
+              <ion-button expand="full" shape="round" color="transparent" type="submit" (click)="logar()">Entrar</ion-button>
             </ion-col>
           </ion-row>
-        </form>
       </ion-col>
        </ion-row>
       </ion-col>

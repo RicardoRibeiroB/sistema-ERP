@@ -19,9 +19,8 @@ export class ClienteLoginPage implements OnInit {
   };
   
   lembrarSenha: boolean = false;  
-  logar(form: any){
-    let cliente = form;
-    console.log(cliente);
+  logar(){
+    console.log(this.user);
     // fetch('http://localhost/',
 		// 	{
 		// 	  method: 'POST',

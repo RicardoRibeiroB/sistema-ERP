@@ -11,16 +11,19 @@ export class ClienteCadastroPage implements OnInit {
 
   ngOnInit() {
   }
-  nome: string = '';
-nomeEmpresa: string = '';
-email: string = '';
-senha: string = '';
-lembrarCadastro: boolean = false;
 
-  adicionarProfessores(form: any){
-    let cliente = form;
-    console.log(form);
-    // fetch('http://localhost/tcc2/cadastro_usuario/cadastro.php',
+cliente = {
+  nome: '',
+  nomeEmpresa: '',
+  email: '',
+  senha: '',
+  lembrarCadastro: false,
+}
+
+
+  adicionarProfessores(){
+    console.log(this.cliente);
+    // fetch('http://localhost/',
     // {
     //   method: 'POST',
     //   headers: {

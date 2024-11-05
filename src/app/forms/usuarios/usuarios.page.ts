@@ -34,7 +34,54 @@ cep: string = '';
 //   this.modal.dismiss(this.cep, 'confirm');
 // }
 
+aluno = {
+  email: '',
+  senha: '',
+  confirmarSenha: '',
+  lembrarCadastro: false,
+  localizacao: {
+    cidade: '',
+    rua: '',
+    bairro: '',
+    cep: '',
+    estado: ''
+  }
+};
 
+loginData = {
+  email: '',
+  senha: '',
+  lembrarSenha: false
+};
+
+logar(form: any) {
+  console.log(form);
+  
+}
+
+
+  adicionarAlunos(){
+    console.log(this.aluno)
+    // fetch('http://localhost/',
+    // {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(cliente)
+    // })
+    // .then(resp => resp.json())
+    // .then(resp=> {
+     
+    //   console.log(resp);
+    // })
+    // .catch(erro => {
+    //   console.log(erro);
+    // })
+    // .finally(()=>{   
+    //   console.log('processo finalizado');
+    // })
+  }
 
 
 
