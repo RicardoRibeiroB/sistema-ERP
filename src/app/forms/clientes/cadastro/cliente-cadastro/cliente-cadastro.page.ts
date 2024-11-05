@@ -17,30 +17,32 @@ cliente = {
   nomeEmpresa: '',
   email: '',
   senha: '',
+  confirmarSenha: '',
+  cpf_rg_cnpj: '',
   lembrarCadastro: false,
 }
 
 
   adicionarProfessores(){
     console.log(this.cliente);
-    // fetch('http://localhost/',
-    // {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(cliente)
-    // })
-    // .then(resp => resp.json())
-    // .then(resp=> {
+    fetch('http://127.0.0.1:8000/api/v1/professor',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(this.cliente)
+    })
+    .then(resp => resp.json())
+    .then(resp=> {
      
-    //   console.log(resp);
-    // })
-    // .catch(erro => {
-    //   console.log(erro);
-    // })
-    // .finally(()=>{   
-    //   console.log('processo finalizado');
-    // })
+      console.log(resp);
+    })
+    .catch(erro => {
+      console.log(erro);
+    })
+    .finally(()=>{   
+      console.log('processo finalizado');
+    })
   }
 }

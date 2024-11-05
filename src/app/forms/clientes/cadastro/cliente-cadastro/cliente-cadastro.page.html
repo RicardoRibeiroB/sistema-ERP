@@ -37,10 +37,16 @@
               <ion-input type="text" id="name-company" [(ngModel)]="cliente.nomeEmpresa" name="nomeEmpresa" placeholder="Nome da empresa"></ion-input>
             </ion-col>
             <ion-col size="8" class="area-input-form">
+              <ion-input type="text" id="cpf" [(ngModel)]="cliente.cpf_rg_cnpj" name="cpf_rg_cnpj" placeholder="cpf, rg ou cnpj"></ion-input>
+            </ion-col>
+            <ion-col size="8" class="area-input-form">
               <ion-input type="email" id="email" [(ngModel)]="cliente.email" name="email" placeholder="Email"></ion-input>
             </ion-col>
             <ion-col size="8" class="area-input-form">
               <ion-input type="password" id="password" [(ngModel)]="cliente.senha" name="senha" placeholder="Senha"></ion-input>
+            </ion-col>
+            <ion-col size="8" class="area-input-form">
+              <ion-input type="password" id="password" [(ngModel)]="cliente.confirmarSenha" name="confirmarSenha" placeholder="confirmar Senha"></ion-input>
             </ion-col>
             <ion-col size="8" class="area-checkbox-form ion-text-center">
               <ion-checkbox [(ngModel)]="cliente.lembrarCadastro" name="lembrarCadastro" labelPlacement="end">Lembrar meu cadastro</ion-checkbox>
