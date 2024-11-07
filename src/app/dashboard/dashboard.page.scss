@@ -212,6 +212,7 @@
       }
     } 
   }
+  
   ion-modal{
     --background: white;
     & ion-toolbar{
@@ -226,11 +227,13 @@
         color: black;
         font-size: 1.2em;
         font-weight: 500;
+        margin-left: 5%;
+        width: 200px;
       }
 
       & ion-input{
         display: flex;
-        margin: 4%;
+        margin: 0% 0 4% 5%;
         font-size: 1.2em;
         color: black;
         border-radius: 10px;
@@ -240,11 +243,29 @@
       & ion-select{
         font-size: 1.3em;
         color: black;
+        margin-left: 5%;
+        margin-top: 0;
+        width: 200px;
+        height: 30px; 
+
+        & ion-select-option{
+          background-color: rgba(217, 217, 217, 1);
+          font-size: 1em;
+          margin-top: 2%;
+        }
       }
+
+      & .imagem-curso{
+        margin-left: 5%;
+
+      }
+      
       & ion-button{
         color: white;
         width: 30vh;
         margin: 5% 10% 2% 25%;
+        --background: #043259;
+        border-radius: 10px;
       }
     }
       

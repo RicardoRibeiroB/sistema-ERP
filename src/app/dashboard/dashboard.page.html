@@ -174,15 +174,14 @@
       </ion-toolbar>
     </ion-header>
    <ion-content>
-
       <p>Nome do Curso:</p>
       <ion-input label-placement="floating" placeholder="Insira o nome do Curso (Ex: Aprenda a pintar quadros)"></ion-input>
 
-      <ion-select interface="popover" placeholder="Selecione a Categoria do Curso">
+      <ion-select label="Categoria do curso" label-placement="stacked" [(ngModel)]="curso.category">
         <ion-select-option value="apple">Programação</ion-select-option>
-        <ion-select-option value="orange">Artes</ion-select-option>
-        <ion-select-option value="banana">Culinária</ion-select-option>
-      </ion-select>
+        <ion-select-option value="orange">Design</ion-select-option>
+        <ion-select-option value="banana">Artes</ion-select-option>
+      </ion-select> 
 
       <p>Valor do Curso:</p>
       <ion-input label-placement="floating" placeholder="Insira o Valor do Curso" type="number" maxlenght="9"></ion-input>
@@ -190,29 +189,9 @@
       <p>Descrição do Curso:</p>
       <ion-input label-placement="floating" placeholder="Insira a Descrição do Curso" type="text"></ion-input>
 
+      <ion-input type="file" [(ngModel)]="curso.image"></ion-input>
+
     <ion-button (click)="setOpen(false)">Salvar</ion-button>
-    <ion-row class="conteudo-modal">
-        <ion-col size="12">
-          <ion-input label="Nome do curso" labelPlacement="floating" placeholder="Digite o nome do Curso" [(ngModel)]="curso.nomeCurso"></ion-input>
-        </ion-col>
-        <ion-col size="12">
-          <ion-select label="Categoria do curso" label-placement="stacked" [(ngModel)]="curso.category">
-            <ion-select-option value="apple">Programação</ion-select-option>
-          </ion-select> 
-        </ion-col>
-        <ion-col size="12">
-          <ion-input label="Preço do curso" labelPlacement="floating" placeholder="Digite o preço do curso" type="number" [(ngModel)]="curso.price"></ion-input>
-        </ion-col>
-        <ion-col size="12">
-          <ion-textarea label="Descrição do curso" labelPlacement="floating" placeholder="Digite uma breve descrição do curso" [(ngModel)]="curso.description"></ion-textarea>
-        </ion-col>
-        <ion-col size="12">
-          <ion-input label="Imagem do curso" type="file" [(ngModel)]="curso.image"></ion-input>
-        </ion-col>
-        <ion-col size="12">
-          <ion-button type="submit" (click)="adicionarCursos()">Cadastrar</ion-button>
-        </ion-col>
-    </ion-row>
    </ion-content>
   </ng-template>
 </ion-modal>
