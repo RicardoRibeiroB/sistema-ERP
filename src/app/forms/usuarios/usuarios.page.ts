@@ -18,11 +18,6 @@ export class UsuariosPage implements OnInit {
 
 //   @ViewChild(IonModal) modal!: IonModal;
 
-cidade: string = '';
-rua: string = '';
-bairro: string = '';
-cep: string = '';
-
 // cancel() {
 //   this.modal.dismiss(null, 'cancel');
 // }
@@ -35,6 +30,7 @@ cep: string = '';
 // }
 
 aluno = {
+  nome: '',
   email: '',
   senha: '',
   confirmarSenha: '',
@@ -62,25 +58,25 @@ logar(form: any) {
 
   adicionarAlunos(){
     console.log(this.aluno)
-    // fetch('http://localhost/',
-    // {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(cliente)
-    // })
-    // .then(resp => resp.json())
-    // .then(resp=> {
+    fetch('http://127.0.0.1:8000/api/v1/aluno',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(this.aluno)
+    })
+    .then(resp => resp.json())
+    .then(resp=> {
      
-    //   console.log(resp);
-    // })
-    // .catch(erro => {
-    //   console.log(erro);
-    // })
-    // .finally(()=>{   
-    //   console.log('processo finalizado');
-    // })
+      console.log(resp);
+    })
+    .catch(erro => {
+      console.log(erro);
+    })
+    .finally(()=>{   
+      console.log('processo finalizado');
+    })
   }
 
 
