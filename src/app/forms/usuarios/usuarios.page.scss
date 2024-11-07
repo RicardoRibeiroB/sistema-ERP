@@ -12,6 +12,13 @@
     align-items: center;
     height: 100vh;
 
+        & .logo{
+            display: flex;
+            margin-top: -55vw;
+            width: 60px;
+            height: 60px;
+        }
+
     & .img-fundo {
         display: flex;
         position: absolute;
