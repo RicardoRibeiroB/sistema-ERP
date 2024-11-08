@@ -52,11 +52,19 @@ export class DashboardPage implements OnInit {
     this.isModalOpen2 = isOpen;
   }
 
-  curso ={
-    nome: '',
+  curso = {
+   nome: '',
     categoria: '',
     valor: '',
     descricao: '',
+    foto: File,
+    localizacao: {
+      cidade: '',
+      rua: '',
+      bairro: '',
+      cep: '',
+      estado: ''
+    } 
   }
 
 
