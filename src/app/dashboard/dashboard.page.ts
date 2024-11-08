@@ -49,35 +49,34 @@ export class DashboardPage implements OnInit {
   }
 
   curso ={
-    nomeCurso: '',
-    category: '',
-    price: '',
-    description: '',
-    image: false,
+    nome: '',
+    categoria: '',
+    valor: '',
+    descricao: '',
   }
 
 
   adicionarCursos(){
     console.log(this.curso);
-    // fetch('http://localhost/',
-    // {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(cursos)
-    // })
-    // .then(resp => resp.json())
-    // .then(resp=> {
+    fetch('http://127.0.0.1:8000/api/v1/curso ',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(this.curso)
+    })
+    .then(resp => resp.json())
+    .then(resp=> {
      
-    //   console.log(resp);
-    // })
-    // .catch(erro => {
-    //   console.log(erro);
-    // })
-    // .finally(()=>{   
-    //   console.log('processo finalizado');
-    // })
+      console.log(resp);
+    })
+    .catch(erro => {
+      console.log(erro);
+    })
+    .finally(()=>{   
+      console.log('processo finalizado');
+    })
   }
 
   }
