@@ -43,9 +43,13 @@ export class DashboardPage implements OnInit {
     }
 
     isModalOpen = false;
+    isModalOpen2 = false;
 
   setOpen(isOpen: boolean) {
     this.isModalOpen = isOpen;
+  }
+  setOpen2(isOpen: boolean) {
+    this.isModalOpen2 = isOpen;
   }
 
   curso ={
