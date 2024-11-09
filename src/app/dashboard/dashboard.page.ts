@@ -57,7 +57,7 @@ export class DashboardPage implements OnInit {
     categoria: '',
     valor: '',
     descricao: '',
-    foto: null as File | null,  // Permite File ou null
+    foto: null as File | null, 
     localizacao: {
       cidade: '',
       rua: '',
@@ -82,7 +82,7 @@ export class DashboardPage implements OnInit {
     formData.append('valor', this.curso.valor);
     formData.append('descricao', this.curso.descricao);
   
-    if (this.curso.foto) { // Verifica se o arquivo existe antes de adicionar
+    if (this.curso.foto) {
       formData.append('foto', this.curso.foto);
     }
   
