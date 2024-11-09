@@ -53,44 +53,58 @@ export class DashboardPage implements OnInit {
   }
 
   curso = {
-   nome: '',
+    nome: '',
     categoria: '',
     valor: '',
     descricao: '',
-    foto: File,
+    foto: null as File | null,  // Permite File ou null
     localizacao: {
       cidade: '',
       rua: '',
       bairro: '',
       cep: '',
       estado: ''
-    } 
+    }
   }
-
-
-  adicionarCursos(){
-    console.log(this.curso);
-    fetch('http://127.0.0.1:8000/api/v1/curso ',
-    {
+  
+  onFileChange(event: Event) {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files[0]) {
+      this.curso.foto = input.files[0];
+    }
+  }
+  
+  
+  adicionarCursos() {
+    const formData = new FormData();
+    formData.append('nome', this.curso.nome);
+    formData.append('categoria', this.curso.categoria);
+    formData.append('valor', this.curso.valor);
+    formData.append('descricao', this.curso.descricao);
+  
+    if (this.curso.foto) { // Verifica se o arquivo existe antes de adicionar
+      formData.append('foto', this.curso.foto);
+    }
+  
+    formData.append('localizacao', JSON.stringify(this.curso.localizacao));
+  
+    fetch('http://127.0.0.1:8000/api/v1/curso', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(this.curso)
+      body: formData
     })
     .then(resp => resp.json())
-    .then(resp=> {
-     
+    .then(resp => {
       console.log(resp);
     })
-    .catch(erro => {
-      console.log(erro);
+    .catch(error => {
+      console.log(error);
     })
-    .finally(()=>{   
+    .finally(() => {
       console.log('processo finalizado');
-    })
+    });
   }
-
+  
+  
   }
 
 

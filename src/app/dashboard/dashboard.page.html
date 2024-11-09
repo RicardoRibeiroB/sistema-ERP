@@ -187,7 +187,7 @@
       <ion-input label-placement="floating" placeholder="Insira a Descrição do Curso" type="text" [(ngModel)]="curso.descricao"></ion-input>
 
         <p>Imagem do Curso:</p>
-        <ion-input type="file" [(ngModel)]="curso.foto"></ion-input>
+        <ion-input type="file" (change)="onFileChange($event)"></ion-input>
 
       <p>Localização do curso:</p>
       <ion-button (click)="setOpen2(true)">Adicionar Endereço</ion-button>
