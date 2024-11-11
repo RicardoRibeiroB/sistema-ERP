@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'usuarios',
     loadChildren: () => import('./forms/usuarios/usuarios.module').then( m => m.UsuariosPageModule)
+  },  {
+    path: 'pagamento',
+    loadChildren: () => import('./pagamento/pagamento.module').then( m => m.PagamentoPageModule)
   },
+
 ];
 
 @NgModule({
