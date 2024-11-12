@@ -1,12 +1,11 @@
 <ion-content [fullscreen]="true">
   <div class="container">
-      <img src="../../../assets/img/logo/Logo branca  sem fundo.png" alt="logo" class="logo">
-    <img src="../../../assets/img/img-fundo.jpg" class="img-fundo">
+    <img src="../../../assets/img/Tela-Login-Aluno/img-fundo.jpg" class="img-fundo">
     <!-- Inicio Primeiro Content (Cadastro) -->
     <div class="first-content" *ngIf="activeDiv === 'div1'">
       <!-- Inicio Primeira Coluna (Cadastro) -->
       <div class="first-column">
-        <img src="../../../assets/img/img-descricao.jpg" class="img-descricao">
+        <img src="../../../assets/img/Tela-Login-Aluno/img-descricao.jpg" class="img-descricao">
         <div class="pelicula">
           <ion-row class="area">
             <ion-col>
@@ -68,17 +67,14 @@
           </ion-row>
         </div>
       </form>
-      
     </div>
-    <!-- Fim Segunda Coluna (Cadastro) -->
-    <!-- Fim Primeiro Content (Cadastro) -->
+    <!-- Fim Segundo Content (Cadastro) -->
 
     <!-- Inicio Segunda Coluna (Login) -->
-
     <div class="second-content" *ngIf="activeDiv === 'div2'">
       <!-- Inicio Primeira Coluna (Login) -->
       <div class="first-column">
-        <img src="../../../assets/img/img-descricao.jpg" class="img-descricao">
+        <img src="../../../assets/img/Tela-Login-Aluno/img-descricao.jpg" class="img-descricao">
         <div class="pelicula">
           <ion-row class="area">
             <ion-col>
@@ -87,13 +83,12 @@
           </ion-row>
           <ion-row class="destaque">
             <ion-col>
-              <p>Promover <br>as vantagens <br>das auals <br> presenciais</p>
+              <p>Promover <br>as vantagens <br>das aulas <br> presenciais</p>
             </ion-col>
           </ion-row>
           <ion-row class="sub-destaque">
             <ion-col>
-              <p>Em um mundo digitalizado, destacando a qualidade e a interação única que apenas o ensino presencial
-                pode oferecer.</p>
+              <p>Em um mundo digitalizado, destacando a qualidade e a interação única que apenas o ensino presencial pode oferecer.</p>
             </ion-col>
           </ion-row>
         </div>
@@ -103,43 +98,39 @@
       <!-- Inicio Segunda Coluna (Login) -->
       <div class="second-column">
         <form>
-          <div class="second-column">
-            <ion-row class="titulo">
-              <ion-col size="12">
-                <p>Login</p>
-              </ion-col>
-            </ion-row>
-            <ion-row class="formulario">
-              <ion-col size="12">
-                <p>E-mail*</p>
-                <ion-input type="email" [(ngModel)]="aluno.email" name="email" placeholder="Digite seu e-mail"></ion-input>
+          <ion-row class="titulo">
+            <ion-col size="12">
+              <p>Login</p>
+            </ion-col>
+          </ion-row>
+          <ion-row class="formulario">
+            <ion-col size="12">
+              <p>E-mail*</p>
+              <ion-input type="email" [(ngModel)]="aluno.email" name="email" placeholder="Digite seu e-mail"></ion-input>
         
-                <p>Senha*</p>
-                <ion-input type="password" [(ngModel)]="aluno.senha" name="senha" placeholder="Digite sua senha"></ion-input>
-        
-              </ion-col>
-            </ion-row>
-            <ion-row class="finalizar">
-              <ion-col size="12">
-                <ion-checkbox [(ngModel)]="aluno.lembrarCadastro" name="lembrarCadastro" labelPlacement="end">Lembrar meu cadastro</ion-checkbox>
-                <p class="ja_cadastrado">Já possui cadastro?
-                  <a href="#" (click)="showDiv('div1'); $event.preventDefault()">Login</a>
-                </p>
-                <ion-button type="submit" (click)="logar()">Logar</ion-button>
-                <p class="outros_cadastros">Cadastrar com</p>
-                <a href="#"><img src="../../../assets/img/logo-face.png" alt="Logo Facebook" width="40px"></a>
-                <a href="#"><img src="../../../assets/img/logo-google.png" alt="Logo Google" width="40px"></a>
-                <a href="#"><img src="../../../assets/img/logo-microsoft.png" alt="Logo Microsoft" width="40px"></a>
-              </ion-col>
-            </ion-row>
-          </div>
+              <p>Senha*</p>
+              <ion-input type="password" [(ngModel)]="aluno.senha" name="senha" placeholder="Digite sua senha"></ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row class="finalizar">
+            <ion-col size="12">
+              <ion-checkbox [(ngModel)]="aluno.lembrarCadastro" name="lembrarCadastro" labelPlacement="end">Lembrar meu cadastro</ion-checkbox>
+              <p class="ja_cadastrado">Já possui cadastro?
+                <a href="#" (click)="showDiv('div1'); $event.preventDefault()">Login</a>
+              </p>
+              <ion-button type="submit" (click)="logar()">Logar</ion-button>
+              <p class="outros_cadastros">Cadastrar com</p>
+              <a href="#"><img src="../../../assets/img/logo-face.png" alt="Logo Facebook" width="40px"></a>
+              <a href="#"><img src="../../../assets/img/logo-google.png" alt="Logo Google" width="40px"></a>
+              <a href="#"><img src="../../../assets/img/logo-microsoft.png" alt="Logo Microsoft" width="40px"></a>
+            </ion-col>
+          </ion-row>
         </form>
-        
       </div>
     </div>
+    <!-- Fim Segunda Coluna (Login) -->
   </div>
 </ion-content>
-
 
 <ion-modal [isOpen]="isModalOpen">
   <ng-template>
@@ -151,7 +142,6 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <!-- <form #inserir="ngForm" (ngSubmit)="adicionarAlunos(inserir.value)"> -->
       <ion-item>
         <p>Cidade:</p>
         <ion-input label-placement="floating" placeholder="Insira o nome da Cidade" [(ngModel)]="aluno.localizacao.cidade" name="cidade"></ion-input>
@@ -198,15 +188,8 @@
           <ion-select-option value="SE">Sergipe (SE)</ion-select-option>
           <ion-select-option value="TO">Tocantins (TO)</ion-select-option>
         </ion-select>
-        
       </ion-item>
-      <ion-button (click)="setOpen(false)" type="submit">Salvar</ion-button>
-    <!-- </form> -->
+      <ion-button expand="full" (click)="save()">Salvar</ion-button>
     </ion-content>
   </ng-template>
 </ion-modal>
-
-
-
-
-<!-- blablabla -->
