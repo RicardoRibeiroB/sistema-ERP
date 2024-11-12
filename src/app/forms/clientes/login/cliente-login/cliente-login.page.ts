@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';  
+import { Router } from '@angular/router';  
 
 @Component({
   selector: 'app-cliente-login',
@@ -7,41 +9,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteLoginPage implements OnInit {
 
-  constructor() { }
+  lembrarSenha: boolean = false;
 
-  ngOnInit() {
-  }
   user = {
-    email: null,
-    senha: null,
-    conectado: false,
-    token: null
+    email: '',
+    senha: '',
   };
-  
-  lembrarSenha: boolean = false;  
-  logar(){
-    console.log(this.user);
-    // fetch('http://localhost/',
-		// 	{
-		// 	  method: 'POST',
-		// 	  headers: {
-		// 	    'Content-Type': 'application/json',
-		// 	  },
-		// 	  body: JSON.stringify(cliente)
-		// 	}
-		// )
-    // .then(response => response.json())
-    // .then(response => {
-    //   this.user = response;
-    //   console.log(this.user);
-    // })    
-    // .catch(erro => {
-    //   console.log(erro);
-    // })
-    // .finally(()=>{
-      
-    //   console.log('processo finalizado');
-    // })
-  }
 
+  constructor(private http: HttpClient, private router: Router) { }
+
+  ngOnInit() {}
+
+  logar() {
+    if (!this.user.email || !this.user.senha) {
+      alert('Por favor, preencha todos os campos!');
+      return;
+    }
+
+    this.http.post('http://127.0.0.1:8000/api/v1/login-professor', this.user)
+      .subscribe({
+        next: (response: any) => {
+          console.log('Login bem-sucedido:', response);
+          alert('Login realizado com sucesso!');
+          
+        },
+        error: (err) => {
+          console.error('Erro no login:', err);
+          alert('Credenciais inválidas ou erro na autenticação. Tente novamente.');
+        },
+        complete: () => {
+          console.log('Processo de login finalizado.');
+        }
+      });
+  }
 }
