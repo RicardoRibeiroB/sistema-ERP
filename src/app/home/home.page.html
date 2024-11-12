@@ -2,17 +2,17 @@
   <ion-row class="top-side">
     <ion-row class="header">
       <ion-col size="12">
-        <img src="#" alt="LOGO" class="logo">
-        <ion-button fill="clear">Início</ion-button>
-        <ion-button fill="clear">Sobre</ion-button>
-        <ion-button fill="clear">Serviços</ion-button>
-        <ion-button fill="clear">Como funciona</ion-button>
+        <img src="../../assets/img/logo/logo azul com nome sem fundo.png" alt="LOGO" class="logo">
+        <ion-button fill="clear" (click)="scrollToInicio">Início</ion-button>
+        <ion-button fill="clear" (click)="scrollToPlans()">Planos</ion-button>
+        <ion-button fill="clear" (click)="scrollToAbout()">Sobre</ion-button>
+        <ion-button fill="clear" (click)="scrollToEstudeConosco()">Estude Conosco</ion-button>
         <ion-button fill="clear" class="side-right" color="light">Buscar cursos</ion-button>
-        <ion-button fill="clear" color="light">Divulgue seu curso</ion-button>
+        <ion-button fill="clear" (click)="scrollToDivulgue" color="light">Divulgue seu curso</ion-button>
         <ion-button fill="solid" color="transparent" class="button-open">Cadastre-se</ion-button>
       </ion-col>
     </ion-row>
-    <ion-row class="content-in-topside">
+    <ion-row class="content-in-topside" id="inicio">
       <ion-col size="2.5" class="text-in-top-side">
         <h1>Descubra cursos presenciais de qualidade em nosso site e transforme
            seu futuro!</h1>
@@ -26,7 +26,7 @@
     </ion-row>
   </ion-row>
   <ion-row class="mid-side">
-      <ion-row class="content-plans" size="12">
+      <ion-row class="content-plans" size="12"  id="planos">
         <ion-col size="12">
           <ion-card class="fundo">
             <ion-card class="card">
@@ -55,7 +55,7 @@
           </ion-card>
         </ion-col>
       </ion-row>
-      <ion-row class="content-calling-people">
+      <ion-row class="content-calling-people" id="sobre">
         <ion-col size="6" class="text">
           <p class="text-calling-people">O Seek Learning é um software que facilita a busca por cursos presenciais na região e permite que empreendedores cadastrem suas ofertas. A plataforma conecta estudantes a cursos locais de forma prática e personalizada. Com três níveis de acesso, o Seek Learning oferece recursos que se adaptam às necessidades dos alunos: o acesso básico permite buscas rápidas; o acesso plus inclui filtros como localização e preço; e o premium oferece contato direto com professores e avaliações. Assim, o Seek Learning simplifica o ensino presencial e amplia oportunidades para empreendedores educacionais.</p>
         </ion-col>
@@ -66,7 +66,7 @@
           </div>
         </ion-col>
       </ion-row>
-      <ion-row class="content-calling-students">
+      <ion-row class="content-calling-students" id="estude-conosco">
         <ion-row>
           <ion-col size="12">
             <ion-card size="12" class="calling-card">
@@ -82,7 +82,7 @@
           </ion-col>
         </ion-row>
       </ion-row>
-      <ion-row class="content-calling-teachers ion-justify-content-center">
+      <ion-row class="content-calling-teachers ion-justify-content-center" id="divulgue">
         <ion-col size="10" class="texts ion-text-center">
           <h1>Vire Professor <br /> com a gente</h1>
           <p>Você, educador apaixonado, já imaginou <br /> ter uma plataforma que te conecta com <br />
