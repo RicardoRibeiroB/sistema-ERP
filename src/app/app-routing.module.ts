@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)  // Carregamento preguiçoso do módulo home
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
     path: '',
@@ -13,7 +13,11 @@ const routes: Routes = [
   },
   {
     path: 'usuarios',
-    loadChildren: () => import('./forms/usuarios/usuarios.module').then(m => m.UsuariosPageModule)
+    loadChildren: () => import('./forms/usuarios/usuarios.module').then( m => m.UsuariosPageModule)
+  },
+  {
+    path: 'pagamento',
+    loadChildren: () => import('./pagamento/pagamento.module').then( m => m.PagamentoPageModule)
   },
   {
     path: 'cliente-cadastro',
@@ -22,7 +26,7 @@ const routes: Routes = [
   {
     path: 'cliente-login',
     loadChildren: () => import('./forms/clientes/login/cliente-login/cliente-login.module').then(m => m.ClienteLoginPageModule)
-  },
+  }
 ];
 
 @NgModule({
