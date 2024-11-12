@@ -1,105 +1,124 @@
 <ion-content>
-    <div class="all">
-      <ion-row class="header ion-justify-content-center">
-        <ion-col size="12">
-          <h1>LOGO</h1>
-        </ion-col>
-      </ion-row>
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="6">
-         <ion-row class="content ">
-        <ion-col size="12" class="side-right">
-            <ion-row class="ion-justify-content-center">
-                <ion-col size="12" class="area-title-form">
-                <h1 class="text-title-form ion-text-center">Pagamento</h1>
-                </ion-col>
-                <ion-col size="8" class="area-input-form">
-                    <ion-label position="stacked">Tipo de pagamento</ion-label>
-                    <ion-list>
-                      <ion-item>
-                        <ion-label>PIX</ion-label>
-                        <ion-checkbox 
-                          slot="end" 
-                          [(ngModel)]="isPixSelected" 
-                          (ionChange)="selectPayment('pix')">
-                        </ion-checkbox>
-                      </ion-item>
-                  
-                      <ion-item>
-                        <ion-label>Cartão</ion-label>
-                        <ion-checkbox 
-                          slot="end" 
-                          [(ngModel)]="isCardSelected" 
-                          (ionChange)="selectPayment('card')">
-                        </ion-checkbox>
-                      </ion-item>
-                    </ion-list>
-                  
-                    <ion-modal [isOpen]="isModalOpen" (willDismiss)="closeModal()">
-                      <ng-template>
-                        <ion-header>
-                          <ion-toolbar>
-                            <ion-title *ngIf="selectedPayment === 'pix'">Pagamento via PIX</ion-title>
-                            <ion-title *ngIf="selectedPayment === 'card'">Pagamento via Cartão</ion-title>
-                            <ion-buttons slot="end">
-                              <ion-button (click)="closeModal()">Fechar</ion-button>
-                            </ion-buttons>
-                          </ion-toolbar>
-                        </ion-header>
-                  
-                        <ion-content>
-                          <!-- Formulário específico para PIX -->
-                          <div *ngIf="selectedPayment === 'pix'">
-                            <ion-item>
-                              <ion-label position="stacked">Chave PIX</ion-label>
-                              <ion-input type="text" placeholder="Digite sua chave PIX"></ion-input>
-                            </ion-item>
-                          </div>
-                  
-                          <!-- Formulário específico para Cartão -->
-                          <div *ngIf="selectedPayment === 'card'">
-                            <ion-item>
-                              <ion-label position="stacked">Número do Cartão</ion-label>
-                              <ion-input type="text" placeholder="Digite o número do cartão"></ion-input>
-                            </ion-item>
-                            <ion-item>
-                              <ion-label position="stacked">Data de Validade</ion-label>
-                              <ion-input type="text" placeholder="MM/AA"></ion-input>
-                            </ion-item>
-                            <ion-item>
-                              <ion-label position="stacked">Código de Segurança</ion-label>
-                              <ion-input type="text" placeholder="CVV"></ion-input>
-                            </ion-item>
-                          </div>
-                        </ion-content>
-                  
-                        <!-- Botão OK -->
-                        <ion-footer>
-                          <ion-toolbar>
-                            <ion-buttons>
-                              <ion-button expand="full" (click)="closeModal()">OK</ion-button>
-                            </ion-buttons>
-                          </ion-toolbar>
-                        </ion-footer>
-                      </ng-template>
-                    </ion-modal>
-                  </ion-col>
-                  
-                <ion-col size="8" class="area-input-form">
-                    <ion-label position="stacked">Valor do pagamento</ion-label>
-                    <ion-input type="number" id="number" name="valor" ></ion-input>
-                </ion-col>
-                <ion-col size="8" class="area-input-form">
-                    <ion-label position="stacked">Data de Nascimento</ion-label>
-                    <ion-input type="text"placeholder="DD/MM/YYYY" pattern="\d{2}/\d{2}/\d{4}" maxlength="10"></ion-input>
-                </ion-col>
-                <ion-col size="5" class="area-button-form">
-                <ion-button expand="full" shape="round" color="transparent" type="submit">Cadastrar</ion-button>
-                </ion-col>
-            </ion-row>
-        </ion-col>
-         </ion-row>
-        </ion-col>
+  <div class="all">
+    <ion-row class="header ion-justify-content-center">
+      <ion-col size="12">
+        <h1>LOGO</h1>
+      </ion-col>
     </ion-row>
-    </div>
-  </ion-content>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6">
+        <ion-row class="content">
+          <ion-col size="12" class="side-right">
+            <ion-row class="ion-justify-content-center">
+              <ion-col size="12" class="area-title-form">
+                <h1 class="text-title-form ion-text-center">Pagamento</h1>
+              </ion-col>
+              
+              <!-- Escolha do Tipo de Pagamento -->
+              <ion-col size="8" class="area-input-form">
+                <ion-label position="stacked">Tipo de pagamento</ion-label>
+                <ion-list>
+                  <ion-item>
+                    <ion-label>PIX</ion-label>
+                    <ion-checkbox 
+                      slot="end" 
+                      [(ngModel)]="isPixSelected" 
+                      (ionChange)="selectPayment('pix')">
+                    </ion-checkbox>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Cartão</ion-label>
+                    <ion-checkbox 
+                      slot="end" 
+                      [(ngModel)]="isCardSelected" 
+                      (ionChange)="selectPayment('card')">
+                    </ion-checkbox>
+                  </ion-item>
+                </ion-list>
+
+                <!-- Modal de pagamento PIX e Cartão -->
+                <ion-modal [isOpen]="isModalOpen" (willDismiss)="closeModal()">
+                  <ng-template>
+                    <ion-header>
+                      <ion-toolbar>
+                        <ion-title *ngIf="selectedPayment === 'pix'">Pagamento via PIX</ion-title>
+                        <ion-title *ngIf="selectedPayment === 'card'">Pagamento via Cartão</ion-title>
+                        <ion-buttons slot="end">
+                          <ion-button (click)="closeModal()">Fechar</ion-button>
+                        </ion-buttons>
+                      </ion-toolbar>
+                    </ion-header>
+
+                    <ion-content>
+                      <!-- Formulário específico para PIX -->
+                      <div *ngIf="selectedPayment === 'pix'">
+                        <ion-item>
+                          <ion-label position="stacked">Chave PIX</ion-label>
+                          <img src="../../assets/img/tela-pagamento/qrcode.png" alt="QR Code">
+                        </ion-item>
+                      </div>
+
+                      <!-- Formulário específico para Cartão -->
+                      <div *ngIf="selectedPayment === 'card'">
+                        <ion-item>
+                          <ion-label position="stacked">Número do Cartão</ion-label>
+                          <ion-input type="text" [(ngModel)]="payment.numeroCartao" placeholder="Digite o número do cartão"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                          <ion-label position="stacked">Data de Validade</ion-label>
+                          <ion-input type="text" [(ngModel)]="payment.validade" placeholder="MM/AA"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                          <ion-label position="stacked">Código de Segurança</ion-label>
+                          <ion-input type="text" [(ngModel)]="payment.cvv" placeholder="CVV"></ion-input>
+                        </ion-item>
+                      </div>
+                    </ion-content>
+
+                    <!-- Botão OK -->
+                    <ion-footer>
+                      <ion-toolbar>
+                        <ion-buttons>
+                          <ion-button expand="full" (click)="closeModal()">OK</ion-button>
+                        </ion-buttons>
+                      </ion-toolbar>
+                    </ion-footer>
+                  </ng-template>
+                </ion-modal>
+              </ion-col>
+              
+              <!-- Campo para valor do pagamento -->
+              <ion-col size="8" class="area-input-form">
+                <ion-label position="stacked">Valor do pagamento</ion-label>
+                <ion-input type="number" [(ngModel)]="payment.valor" placeholder="Digite o valor" [value]="payment.valor"></ion-input>
+              </ion-col>
+
+              <!-- Seleção do Plano -->
+              <ion-col size="8" class="area-input-form">
+                <ion-label position="stacked">Escolha o plano</ion-label>
+                <ion-list>
+                  <ion-item>
+                    <ion-label>Plano Básico</ion-label>
+                    <ion-checkbox [(ngModel)]="payment.plano" (ionChange)="updateValue('basico')" [checked]="payment.plano === 'basico'"></ion-checkbox>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Plano Premium</ion-label>
+                    <ion-checkbox [(ngModel)]="payment.plano" (ionChange)="updateValue('premium')" [checked]="payment.plano === 'premium'"></ion-checkbox>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Plano Profissional</ion-label>
+                    <ion-checkbox [(ngModel)]="payment.plano" (ionChange)="updateValue('profissional')" [checked]="payment.plano === 'profissional'"></ion-checkbox>
+                  </ion-item>
+                </ion-list>
+              </ion-col>
+
+              <ion-col size="5" class="area-button-form">
+                <ion-button expand="full" shape="round" color="transparent" type="submit" (click)="submitPayment()">Cadastrar</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

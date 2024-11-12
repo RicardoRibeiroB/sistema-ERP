@@ -7,36 +7,78 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagamentoPage implements OnInit {
 
-  constructor() { }
+  isModalOpen = false;
+  selectedPayment = '';
+  isPixSelected = false;
+  isCardSelected = false;
 
-  ngOnInit() {
-  }
+  payment = {
+    type: '',
+    plano: '',  // Aqui armazenamos o plano selecionado
+    status: false,  // Inicializa o status como false
+    valor: 0.00,
+    chavePix: false,
+    numeroCartao: '',
+    validade: '',
+    cvv: ''
+  };
 
-  isModalOpen: boolean = false;
-  selectedPayment: string | null = null;
-  isPixSelected: boolean = false;
-  isCardSelected: boolean = false;
+  constructor() {}
 
-  selectPayment(paymentType: string) {
-    if (paymentType === 'pix') {
-      this.isPixSelected = !this.isPixSelected;
+  ngOnInit() {}
+
+  selectPayment(type: string) {
+    this.selectedPayment = type;
+    this.isModalOpen = true;
+
+    if (type === 'pix') {
+      this.isPixSelected = true;
       this.isCardSelected = false;
-      this.selectedPayment = this.isPixSelected ? 'pix' : null;
-    } else if (paymentType === 'card') {
-      this.isCardSelected = !this.isCardSelected;
+      this.payment.type = 'pix';
+    } else if (type === 'card') {
+      this.isCardSelected = true;
       this.isPixSelected = false;
-      this.selectedPayment = this.isCardSelected ? 'card' : null;
+      this.payment.type = 'card';
     }
-
-    // Abre o modal apenas se uma opção estiver selecionada
-    this.isModalOpen = this.selectedPayment !== null;
   }
 
   closeModal() {
     this.isModalOpen = false;
-    this.selectedPayment = null;
-    this.isPixSelected = false;
-    this.isCardSelected = false;
   }
 
+  updateValue(plano: string) {
+    this.payment.plano = plano;
+    if (plano === 'basico') {
+      this.payment.valor = 0.00;
+    } else if (plano === 'premium') {
+      this.payment.valor = 15.00;
+    } else if (plano === 'profissional') {
+      this.payment.valor = 9.99;
+    }
+  }
+
+  submitPayment() {
+    // Antes de enviar, altera o status para true
+    this.payment.status = true;
+    this.payment.chavePix = true;
+
+    console.log(this.payment);
+    fetch('http://127.0.0.1:8000/api/v1/pagamento', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(this.payment)
+    })
+    .then(resp => resp.json())
+    .then(resp => {
+      console.log(resp);
+    })
+    .catch(error => {
+      console.log(error);
+    })
+    .finally(() => {
+      console.log('Processo finalizado');
+    });
+  }
 }
