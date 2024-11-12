@@ -2,7 +2,7 @@
   <div class="all">
     <ion-row class="header ion-justify-content-center">
       <ion-col size="12">
-        <h1>LOGO</h1>
+        <img src="../../../../../assets/img/logo/Logo branca  sem fundo.png" width="60px" alt="Logo Seek Learnig">
       </ion-col>
     </ion-row>
 
@@ -55,6 +55,34 @@
             </ion-row>
           </ion-col>
         </ion-row>
+<<<<<<< HEAD
+=======
+        </ion-col>
+      <ion-col size="6" class="side-right">
+          <ion-row class="ion-justify-content-center">
+            <ion-col size="12" class="area-title-form">
+              <h1 class="text-title-form ion-text-center">Faça seu login</h1>
+            </ion-col>
+            <ion-col size="8" class="area-input-form">
+              <ion-input type="email" id="email" name="email" [(ngModel)]="user.email" placeholder="Email"></ion-input>
+            </ion-col>
+            <ion-col size="8" class="area-input-form">
+              <ion-input type="password" id="password" name="senha" [(ngModel)]="user.senha" placeholder="Senha"></ion-input>
+            </ion-col>
+            <ion-col size="5" class="area-checkbox-form">
+              <ion-checkbox [(ngModel)]="lembrarSenha" name="lembrarSenha" labelPlacement="end">Lembrar minha senha</ion-checkbox>
+            </ion-col>
+            <ion-col size="3" class="area-dontrememberPassword-form">
+              <a href="#">Esqueceu a senha?</a>
+            </ion-col>
+            <ion-col size="8" class="area-create-form ion-text-center">
+              <p>Não tem conta? <a routerLink="/cliente-cadastro">Cadastre aqui</a></p>
+            </ion-col>
+            <ion-col size="5" class="area-button-form">
+              <ion-button expand="full" shape="round" color="transparent" type="submit" (click)="logar()">Entrar</ion-button>
+            </ion-col>
+          </ion-row>
+>>>>>>> 9acfe4e524e9efb3bee2e84999cb6f2fea2aed6a
       </ion-col>
     </ion-row>
   </div>
