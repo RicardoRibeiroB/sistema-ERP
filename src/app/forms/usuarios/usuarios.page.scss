@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    // outline: 1px solid red;
+}
+
+// blablabla
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+        & .logo{
+            display: flex;
+            margin-top: -55vw;
+            width: 60px;
+            height: 60px;
+        }
+
+    & .img-fundo {
+        display: flex;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+    }
+
+    & .first-content {
+        display: flex;
+        width: 150vh;
+        height: 80vh;
+        background-color: white;
+
+        & .img-descricao {
+            display: flex;
+            position: absolute;
+            width: 75vh;
+            height: 80vh;
+            // z-index: 1, -1;
+        }
+
+        & .first-column {
+            position: relative;
+            width: 75vh;
+            background-image: linear-gradient(rgba(3, 40, 89, 0.803), rgba(3, 40, 89, 0.808));
+
+            & .pelicula {
+                position: absolute;
+                background-image: linear-gradient(rgba(3, 40, 89, 0.803), rgba(3, 40, 89, 0.808));
+                display: flex;
+                width: 75vh;
+                height: 80vh;
+            }
+
+            & .area a {
+                position: absolute;
+                margin: 2%;
+                width: 20vh;
+                color: white;
+                text-decoration: underline;
+            }
+
+            & .destaque {
+                position: absolute;
+                display: flex;
+                text-align: left;
+                margin: 25% 6% 2%;
+                font-size: 3.5em;
+                width: 40vh;
+                color: white;
+            }
+
+            & .sub-destaque {
+                // display: flex;
+                font-size: 1.2em;
+                margin: 60% 6% 0;
+                width: 40vh;
+                color: white;
+            }
+        }
+
+        & .second-column {
+            width: 75vh;
+            background-color: white;
+
+            & .titulo {
+                display: flex;
+                text-align: center;
+                margin: 8% 0 5%;
+                font-weight: bolder;
+                font-size: 2.5em;
+            }
+
+            & .formulario {
+                display: flex;
+                width: 45vh;
+                margin: 5% 20%;
+
+                & p {
+                    margin: 5% 0 2%;
+                    font: 700;
+                }
+
+                & ion-input {
+                    height: 0;
+                    border-radius: 10px;
+                    background-color: rgba(217, 217, 217, 1);
+                }
+
+                & ion-button {
+                    display: flex;
+                    margin: 5% 10vh 0 10vh;
+                    --background: rgba(3, 40, 89, 1);
+                    --border-radius: 10px;
+                    width: 25vh;
+                    text-align: center;
+                }
+            }
+
+            & .finalizar {
+                display: flex;
+                text-align: center;
+
+                & ion-checkbox {
+                    display: flex;
+                    margin: 2% 26vh;
+                    width: 20vh;
+                }
+
+                & .ja_cadastrado {
+                    margin-left: 25vh;
+                    width: 25vh;
+                }
+
+                & ion-button {
+                    display: flex;
+                    align-items: center;
+                    margin: 2% 29vh;
+                    --background: rgba(3, 40, 89, 1);
+                    width: 170px;
+                }
+
+                & .outros_cadastros {
+                    margin: 2% 2%;
+                    color: rgba(28, 146, 146, 1);
+                    font: 500;
+                }
+
+                & a {
+                    text-decoration: none;
+                    color: rgba(28, 146, 146, 1);
+                }
+
+                & img{
+                    margin: 5%;
+                }
+            }
+        }
+    }
+
+    // Inicio Segunda div (login)
+    & .second-content {
+        display: flex;
+        width: 150vh;
+        height: 80vh;
+        background-color: white;
+
+        & .img-descricao {
+            display: flex;
+            position: absolute;
+            width: 75vh;
+            height: 80vh;
+            // z-index: 1, -1;
+        }
+
+        & .first-column {
+            position: relative;
+            width: 75vh;
+            background-image: linear-gradient(rgba(3, 40, 89, 0.803), rgba(3, 40, 89, 0.808));
+
+            & .pelicula {
+                position: absolute;
+                background-image: linear-gradient(rgba(3, 40, 89, 0.803), rgba(3, 40, 89, 0.808));
+                display: flex;
+                width: 75vh;
+                height: 80vh;
+            }
+
+            & .area a {
+                position: absolute;
+                margin: 2%;
+                width: 20vh;
+                color: white;
+                text-decoration: underline;
+            }
+
+            & .destaque {
+                position: absolute;
+                display: flex;
+                text-align: left;
+                margin: 25% 6% 2%;
+                font-size: 3.5em;
+                width: 40vh;
+                color: white;
+            }
+
+            & .sub-destaque {
+                // display: flex;
+                font-size: 1.2em;
+                margin: 67% 6% 0;
+                width: 40vh;
+                color: white;
+            }
+        }
+
+        & .second-column {
+            width: 75vh;
+            background-color: white;
+
+            & .titulo {
+                display: flex;
+                text-align: center;
+                margin: 15% 0 5%;
+                font-weight: bolder;
+                font: 700;
+                font-size: 2.5em;
+            }
+
+            & .formulario {
+                display: flex;
+                width: 45vh;
+                margin: 5% 20%;
+
+                & p {
+                    margin: 5% 0 2%;
+                    font: 700;
+                }
+
+                & ion-input {
+                    border-radius: 10px;
+                    background-color: rgba(217, 217, 217, 1);
+                }
+            }
+
+            & .finalizar {
+                display: flex;
+                text-align: center;
+
+                & ion-checkbox {
+                    display: flex;
+                    margin: 5% 26vh;
+                    width: 20vh;
+                }
+
+                & ion-button {
+                    display: flex;
+                    align-items: center;
+                    margin: 4% 29vh;
+                    --background: rgba(3, 40, 89, 1);
+                    width: 170px;
+                }
+
+                & p {
+                    font: 500;
+                }
+
+                & a {
+                    text-decoration: none;
+                    color: rgba(28, 146, 146, 1);
+                }
+
+                & img{
+                    margin: 5%;
+                }
+            }
+        }
+    }
+}
+
+// Modal
+
+ion-modal{
+    --background: white;
+    & ion-toolbar{
+      --background: white;
+      --color: black;
+    }
+    & ion-content{
+
+      --background: white;
+      & ion-input{
+        display: flex;
+        margin: 4%;
+        font-size: 1.2em;
+        color: black;
+        border-radius: 10px;
+        width: 50vh;
+        background-color: rgba(217, 217, 217, 1);
+      }
+      & ion-select{
+        font-size: 1.3em;
+        color: black;
+      }
+      & ion-button{
+        color: white;
+        width: 30vh;
+        margin: 5% 10% 2% 25%;
+      }
+    }
+      
+    
+  }
+  

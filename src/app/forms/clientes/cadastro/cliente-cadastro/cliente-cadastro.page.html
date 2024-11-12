@@ -1,0 +1,63 @@
+<ion-content>
+  <div class="all">
+    <ion-row class="header ion-justify-content-center">
+      <ion-col size="12">
+        <img src="../../../../../assets/img/logo/Logo branca  sem fundo.png" width="60px" alt="Logo Seek Learnig">
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="8">
+        <ion-row class="content">
+          <ion-col size="6" class="side-left">
+            <ion-row>
+              <ion-col size="12" class="area-teacher">
+                <h2 class="text-teacher">Área do Professor</h2>
+              </ion-col>
+              <ion-col size="12" class="area-calling">
+                <ion-row>
+                  <ion-col size="12">
+                    <h3 class="text-calling-st">Potencialize sua Carreira de Professor Conosco<br> Seja Reconhecido e Inspire!</h3>
+                  </ion-col>
+                  <ion-col size="12">
+                    <p class="text-calling-sd">Veja poderosas aplicações para ensinar, saiba a posição do aluno e aproveite todas as funcionalidades que nossos programas oferecem para que você e seus alunos possam alcançar seus objetivos.</p>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="6" class="side-right">
+            <ion-row class="ion-justify-content-center">
+              <ion-col size="12" class="area-title-form">
+                <h1 class="text-title-form ion-text-center">Dados Cadastrais</h1>
+              </ion-col>
+              <ion-col size="8" class="area-input-form">
+                <ion-input type="text" id="name" [(ngModel)]="cliente.nome" name="nome" placeholder="Nome"></ion-input>
+              </ion-col>
+              <ion-col size="8" class="area-input-form">
+                <ion-input type="text" id="name-company" [(ngModel)]="cliente.empresa" name="empresa" placeholder="Nome da empresa"></ion-input>
+              </ion-col>
+              <ion-col size="8" class="area-input-form">
+                <ion-input type="text" id="cpf" [(ngModel)]="cliente.cpf_rg_cnpj" name="cpf_rg_cnpj" placeholder="cpf, rg ou cnpj"></ion-input>
+              </ion-col>
+              <ion-col size="8" class="area-input-form">
+                <ion-input type="email" id="email" [(ngModel)]="cliente.email" name="email" placeholder="Email"></ion-input>
+              </ion-col>
+              <ion-col size="8" class="area-input-form">
+                <ion-input type="password" id="password" [(ngModel)]="cliente.senha" name="senha" placeholder="Senha"></ion-input>
+              </ion-col>
+              <ion-col size="8" class="area-input-form">
+                <ion-input type="password" id="password" [(ngModel)]="cliente.confirmarSenha" name="confirmarSenha" placeholder="Confirmar Senha"></ion-input>
+              </ion-col>
+              <ion-col size="8" class="area-checkbox-form ion-text-center">
+                <ion-checkbox [(ngModel)]="cliente.lembrarCadastro" name="lembrarCadastro" labelPlacement="end">Lembrar meu cadastro</ion-checkbox>
+              </ion-col>
+              <ion-col size="5" class="area-button-form">
+                <ion-button expand="full" shape="round" color="transparent" type="submit" (click)="adicionarProfessores()">Cadastrar</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

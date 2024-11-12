@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)  // Carregamento preguiçoso do módulo home
   },
   {
     path: '',
@@ -12,12 +12,16 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'clientes',
-    loadChildren: () => import('./forms/clientes/clientes.module').then( m => m.ClientesPageModule)
+    path: 'usuarios',
+    loadChildren: () => import('./forms/usuarios/usuarios.module').then(m => m.UsuariosPageModule)
   },
   {
-    path: 'usuarios',
-    loadChildren: () => import('./forms/usuarios/usuarios.module').then( m => m.UsuariosPageModule)
+    path: 'cliente-cadastro',
+    loadChildren: () => import('./forms/clientes/cadastro/cliente-cadastro/cliente-cadastro.module').then(m => m.ClienteCadastroPageModule)
+  },
+  {
+    path: 'cliente-login',
+    loadChildren: () => import('./forms/clientes/login/cliente-login/cliente-login.module').then(m => m.ClienteLoginPageModule)
   },
 ];
 

@@ -1,13 +1,212 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>usuarios</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">usuarios</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="container">
+      <img src="../../../assets/img/logo/Logo branca  sem fundo.png" alt="logo" class="logo">
+    <img src="../../../assets/img/img-fundo.jpg" class="img-fundo">
+    <!-- Inicio Primeiro Content (Cadastro) -->
+    <div class="first-content" *ngIf="activeDiv === 'div1'">
+      <!-- Inicio Primeira Coluna (Cadastro) -->
+      <div class="first-column">
+        <img src="../../../assets/img/img-descricao.jpg" class="img-descricao">
+        <div class="pelicula">
+          <ion-row class="area">
+            <ion-col>
+              <a href="#">Área do Aluno</a>
+            </ion-col>
+          </ion-row>
+          <ion-row class="destaque">
+            <ion-col>
+              <p>Destacar os <br>Benefícios <br>do Nosso Site</p>
+            </ion-col>
+          </ion-row>
+          <ion-row class="sub-destaque">
+            <ion-col>
+              <p>Oferecemos pelo site, incentivando os alunos a comunidade local a valorizar a experiência educacional
+                personalizada e de alta qualidade que só o ensino presencial pode proporcionar.</p>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+      <!-- Fim Primeira Coluna (Cadastro) -->
+
+      <!-- Inicio Segunda Coluna (Cadastro) -->
+      <form>
+        <div class="second-column">
+          <ion-row class="titulo">
+            <ion-col size="12">
+              <p>CADASTRO</p>
+            </ion-col>
+          </ion-row>
+          <ion-row class="formulario">
+            <ion-col size="12">
+              <p>Nome*</p>
+              <ion-input type="email" [(ngModel)]="aluno.nome" name="nome" placeholder="Digite seu nome"></ion-input>
+
+              <p>E-mail*</p>
+              <ion-input type="email" [(ngModel)]="aluno.email" name="email" placeholder="Digite seu e-mail"></ion-input>
+      
+              <p>Senha*</p>
+              <ion-input type="password" [(ngModel)]="aluno.senha" name="senha" placeholder="Digite sua senha"></ion-input>
+      
+              <p>Confirmar Senha*</p>
+              <ion-input type="password" [(ngModel)]="aluno.confirmarSenha" name="confirmarSenha" placeholder="Confirme sua senha"></ion-input>
+      
+              <ion-button (click)="setOpen(true)" [(ngModel)]="aluno.localizacao">Adicionar Endereço</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row class="finalizar">
+            <ion-col size="12">
+              <ion-checkbox [(ngModel)]="aluno.lembrarCadastro" name="lembrarCadastro" labelPlacement="end">Lembrar meu cadastro</ion-checkbox>
+              <p class="ja_cadastrado">Já possui cadastro?
+                <a href="#" (click)="showDiv('div2'); $event.preventDefault()">Login</a>
+              </p>
+              <ion-button (click)="adicionarAlunos()">Cadastrar</ion-button>
+              <p class="outros_cadastros">Cadastrar com</p>
+              <a href="#"><img src="../../../assets/img/logo-face.png" alt="Logo Facebook" width="40px"></a>
+              <a href="#"><img src="../../../assets/img/logo-google.png" alt="Logo Google" width="40px"></a>
+              <a href="#"><img src="../../../assets/img/logo-microsoft.png" alt="Logo Microsoft" width="40px"></a>
+            </ion-col>
+          </ion-row>
+        </div>
+      </form>
+      
+    </div>
+    <!-- Fim Segunda Coluna (Cadastro) -->
+    <!-- Fim Primeiro Content (Cadastro) -->
+
+    <!-- Inicio Segunda Coluna (Login) -->
+
+    <div class="second-content" *ngIf="activeDiv === 'div2'">
+      <!-- Inicio Primeira Coluna (Login) -->
+      <div class="first-column">
+        <img src="../../../assets/img/img-descricao.jpg" class="img-descricao">
+        <div class="pelicula">
+          <ion-row class="area">
+            <ion-col>
+              <a href="#">Área do Aluno</a>
+            </ion-col>
+          </ion-row>
+          <ion-row class="destaque">
+            <ion-col>
+              <p>Promover <br>as vantagens <br>das auals <br> presenciais</p>
+            </ion-col>
+          </ion-row>
+          <ion-row class="sub-destaque">
+            <ion-col>
+              <p>Em um mundo digitalizado, destacando a qualidade e a interação única que apenas o ensino presencial
+                pode oferecer.</p>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+      <!-- Fim Primeira Coluna (Login) -->
+
+      <!-- Inicio Segunda Coluna (Login) -->
+      <div class="second-column">
+        <form>
+          <div class="second-column">
+            <ion-row class="titulo">
+              <ion-col size="12">
+                <p>Login</p>
+              </ion-col>
+            </ion-row>
+            <ion-row class="formulario">
+              <ion-col size="12">
+                <p>E-mail*</p>
+                <ion-input type="email" [(ngModel)]="aluno.email" name="email" placeholder="Digite seu e-mail"></ion-input>
+        
+                <p>Senha*</p>
+                <ion-input type="password" [(ngModel)]="aluno.senha" name="senha" placeholder="Digite sua senha"></ion-input>
+        
+              </ion-col>
+            </ion-row>
+            <ion-row class="finalizar">
+              <ion-col size="12">
+                <ion-checkbox [(ngModel)]="aluno.lembrarCadastro" name="lembrarCadastro" labelPlacement="end">Lembrar meu cadastro</ion-checkbox>
+                <p class="ja_cadastrado">Já possui cadastro?
+                  <a href="#" (click)="showDiv('div1'); $event.preventDefault()">Login</a>
+                </p>
+                <ion-button type="submit" (click)="logar()">Logar</ion-button>
+                <p class="outros_cadastros">Cadastrar com</p>
+                <a href="#"><img src="../../../assets/img/logo-face.png" alt="Logo Facebook" width="40px"></a>
+                <a href="#"><img src="../../../assets/img/logo-google.png" alt="Logo Google" width="40px"></a>
+                <a href="#"><img src="../../../assets/img/logo-microsoft.png" alt="Logo Microsoft" width="40px"></a>
+              </ion-col>
+            </ion-row>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+  </div>
 </ion-content>
+
+
+<ion-modal [isOpen]="isModalOpen">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpen(false)">Cancelar</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <!-- <form #inserir="ngForm" (ngSubmit)="adicionarAlunos(inserir.value)"> -->
+      <ion-item>
+        <p>Cidade:</p>
+        <ion-input label-placement="floating" placeholder="Insira o nome da Cidade" [(ngModel)]="aluno.localizacao.cidade" name="cidade"></ion-input>
+      </ion-item>
+      <ion-item>
+        <p>Bairro:</p>
+        <ion-input label-placement="floating" placeholder="Insira o nome do Bairro" [(ngModel)]="aluno.localizacao.bairro" name="bairro"></ion-input>
+      </ion-item>
+      <ion-item>
+        <p>Rua:</p>
+        <ion-input label-placement="floating" placeholder="Insira o nome da Rua" [(ngModel)]="aluno.localizacao.rua" name="rua"></ion-input>
+      </ion-item>
+      <ion-item>
+        <p>Cep:</p>
+        <ion-input label-placement="floating" placeholder="Insira o CEP" [(ngModel)]="aluno.localizacao.cep" name="cep" type="number" maxlength="8"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-select interface="popover" placeholder="Selecione o estado" [(ngModel)]="aluno.localizacao.estado" name="estado">
+          <ion-select-option value="AC">Acre (AC)</ion-select-option>
+          <ion-select-option value="AL">Alagoas (AL)</ion-select-option>
+          <ion-select-option value="AP">Amapá (AP)</ion-select-option>
+          <ion-select-option value="AM">Amazonas (AM)</ion-select-option>
+          <ion-select-option value="BA">Bahia (BA)</ion-select-option>
+          <ion-select-option value="CE">Ceará (CE)</ion-select-option>
+          <ion-select-option value="DF">Distrito Federal (DF)</ion-select-option>
+          <ion-select-option value="ES">Espírito Santo (ES)</ion-select-option>
+          <ion-select-option value="GO">Goiás (GO)</ion-select-option>
+          <ion-select-option value="MA">Maranhão (MA)</ion-select-option>
+          <ion-select-option value="MT">Mato Grosso (MT)</ion-select-option>
+          <ion-select-option value="MS">Mato Grosso do Sul (MS)</ion-select-option>
+          <ion-select-option value="MG">Minas Gerais (MG)</ion-select-option>
+          <ion-select-option value="PA">Pará (PA)</ion-select-option>
+          <ion-select-option value="PB">Paraíba (PB)</ion-select-option>
+          <ion-select-option value="PR">Paraná (PR)</ion-select-option>
+          <ion-select-option value="PE">Pernambuco (PE)</ion-select-option>
+          <ion-select-option value="PI">Piauí (PI)</ion-select-option>
+          <ion-select-option value="RJ">Rio de Janeiro (RJ)</ion-select-option>
+          <ion-select-option value="RN">Rio Grande do Norte (RN)</ion-select-option>
+          <ion-select-option value="RS">Rio Grande do Sul (RS)</ion-select-option>
+          <ion-select-option value="RO">Rondônia (RO)</ion-select-option>
+          <ion-select-option value="RR">Roraima (RR)</ion-select-option>
+          <ion-select-option value="SC">Santa Catarina (SC)</ion-select-option>
+          <ion-select-option value="SP">São Paulo (SP)</ion-select-option>
+          <ion-select-option value="SE">Sergipe (SE)</ion-select-option>
+          <ion-select-option value="TO">Tocantins (TO)</ion-select-option>
+        </ion-select>
+        
+      </ion-item>
+      <ion-button (click)="setOpen(false)" type="submit">Salvar</ion-button>
+    <!-- </form> -->
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+
+
+
+<!-- blablabla -->
