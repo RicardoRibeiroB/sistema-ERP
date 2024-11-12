@@ -1,6 +1,8 @@
 <ion-content [fullscreen]="true">
   <div class="container">
+    <img src="../../../assets/img/logo/Logo branca sem fundo.png" alt="logo" class="logo">
     <img src="../../../assets/img/Tela-Login-Aluno/img-fundo.jpg" class="img-fundo">
+    
     <!-- Inicio Primeiro Content (Cadastro) -->
     <div class="first-content" *ngIf="activeDiv === 'div1'">
       <!-- Inicio Primeira Coluna (Cadastro) -->
@@ -19,8 +21,7 @@
           </ion-row>
           <ion-row class="sub-destaque">
             <ion-col>
-              <p>Oferecemos pelo site, incentivando os alunos a comunidade local a valorizar a experiência educacional
-                personalizada e de alta qualidade que só o ensino presencial pode proporcionar.</p>
+              <p>Oferecemos pelo site, incentivando os alunos e a comunidade local a valorizar a experiência educacional personalizada e de alta qualidade que só o ensino presencial pode proporcionar.</p>
             </ion-col>
           </ion-row>
         </div>
@@ -38,7 +39,7 @@
           <ion-row class="formulario">
             <ion-col size="12">
               <p>Nome*</p>
-              <ion-input type="email" [(ngModel)]="aluno.nome" name="nome" placeholder="Digite seu nome"></ion-input>
+              <ion-input type="text" [(ngModel)]="aluno.nome" name="nome" placeholder="Digite seu nome"></ion-input>
 
               <p>E-mail*</p>
               <ion-input type="email" [(ngModel)]="aluno.email" name="email" placeholder="Digite seu e-mail"></ion-input>
@@ -60,9 +61,6 @@
               </p>
               <ion-button (click)="adicionarAlunos()">Cadastrar</ion-button>
               <p class="outros_cadastros">Cadastrar com</p>
-              <a href="#"><img src="../../../assets/img/logo-face.png" alt="Logo Facebook" width="40px"></a>
-              <a href="#"><img src="../../../assets/img/logo-google.png" alt="Logo Google" width="40px"></a>
-              <a href="#"><img src="../../../assets/img/logo-microsoft.png" alt="Logo Microsoft" width="40px"></a>
             </ion-col>
           </ion-row>
         </div>
@@ -119,19 +117,16 @@
                 <a href="#" (click)="showDiv('div1'); $event.preventDefault()">Login</a>
               </p>
               <ion-button type="submit" (click)="logar()">Logar</ion-button>
-              <p class="outros_cadastros">Cadastrar com</p>
-              <a href="#"><img src="../../../assets/img/logo-face.png" alt="Logo Facebook" width="40px"></a>
-              <a href="#"><img src="../../../assets/img/logo-google.png" alt="Logo Google" width="40px"></a>
-              <a href="#"><img src="../../../assets/img/logo-microsoft.png" alt="Logo Microsoft" width="40px"></a>
             </ion-col>
           </ion-row>
         </form>
       </div>
     </div>
-    <!-- Fim Segunda Coluna (Login) -->
+    <!-- Fim Segundo Content (Login) -->
   </div>
 </ion-content>
 
+<!-- Modal para Adicionar Endereço -->
 <ion-modal [isOpen]="isModalOpen">
   <ng-template>
     <ion-header>
@@ -189,7 +184,7 @@
           <ion-select-option value="TO">Tocantins (TO)</ion-select-option>
         </ion-select>
       </ion-item>
-      <ion-button expand="full" (click)="save()">Salvar</ion-button>
+      <ion-button (click)="setOpen(false)" type="submit">Salvar</ion-button>
     </ion-content>
   </ng-template>
 </ion-modal>
