@@ -1,0 +1,227 @@
+<ion-content [fullscreen]="true" class="fundo-principal">
+  <ion-row class="choose-cursos">
+    <ion-row class="content">
+      <ion-col size="1" class="side-left">
+        <ion-row class="logo">
+          <ion-col size="12">
+            <img src="../../assets/img/logo/logo azul com nome sem fundo.png" alt="logo">
+          </ion-col>
+        </ion-row>
+        <ion-row class="add-cursos">
+          <ion-col size="12">
+            <ion-icon name="add-circle-outline" (click)="setOpen(true)"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row class="menu">
+          <ion-col size="12">
+            <ion-icon name="home"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row class="history">
+          <ion-col size="12">
+            <ion-icon name="apps"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row class="grafic">
+          <ion-col size="12">
+            <ion-icon name="trending-up"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="10" class="side-mid">
+        <ion-row class="header">
+          <ion-col size="2" class="text-title">
+            <h1>Dashboard</h1>
+          </ion-col>
+          <ion-col size="7" class="header ion-text-end">
+            <ion-icon name="calendar"></ion-icon>
+            <ion-icon name="notifications"></ion-icon>
+          </ion-col>
+          <ion-card>
+            <ion-item color="transparent">
+              <ion-thumbnail slot="start">
+                <img src="../../assets/img/Tela-dashboard/pessoa-conta.jpg" alt="pessoa">
+              </ion-thumbnail>
+              <ion-thumbnail slot="end">
+                <img src="../../assets/img/Tela-dashboard/seta-drop.png" class="seta" alt="pessoa">
+              </ion-thumbnail>
+              <ion-label>Carlos.R</ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-row>
+        <ion-row class="cards">
+          <ion-col size="12">
+            <ion-row>
+              <ion-col size="1.7">
+                <ion-card>
+                  <ion-icon name="card-outline"></ion-icon>
+                  <h1>Cartão</h1>
+                </ion-card>
+              </ion-col>
+              <ion-col size="1.7">
+                <ion-card>
+                  <ion-icon name="swap-horizontal-outline"></ion-icon>
+                  <h1>Coverção</h1>
+                </ion-card>
+              </ion-col>
+              <ion-col size="1.7">
+                <ion-card>
+                  <img src="../../assets/img/Tela-dashboard/bank.png" alt="banco">
+                  <h1>Banco</h1>
+                </ion-card>
+              </ion-col>
+              <ion-col size="1.7">
+                <ion-card>
+                  <img src="../../assets/img/Tela-dashboard/invoice.png" alt="Fatura">
+                  <h1>Fatura</h1>
+                </ion-card>
+              </ion-col>
+
+              <ion-col size="1.7">
+                <ion-card>
+                  <ion-icon name="location-outline"></ion-icon>
+                  <h1>Local</h1>
+                </ion-card>
+              </ion-col>
+              <ion-col size="3.5" class="atividade">
+                <ion-card>
+                  <ion-row>
+                    <div class="fisrt-content">
+                      <div class="img">
+                        <img src="../../assets/img/Tela-dashboard/card-removebg-preview.png" alt="Cartão"
+                          class="cartao">
+                      </div>
+
+                      <h1>Atividades Recentes</h1>
+
+                      <p class="data">31 Ago 2024</p>
+                      <ion-row>
+                        <ion-col size="6" class="despesas">
+                          <p class="p"><ion-icon name="wifi"></ion-icon>WI-FI</p>
+                        </ion-col>
+                        <ion-col size="5" class="despesas">
+                          <p class="num">$100</p>
+                        </ion-col>
+                      </ion-row>
+                      <ion-row>
+                        <ion-col size="6" class="despesas">
+                          <p class="p"><ion-icon name="home"></ion-icon>Empresa</p>
+                        </ion-col>
+                        <ion-col size="5" class="despesas">
+                          <p class="num">$2000</p>
+                        </ion-col>
+                      </ion-row>
+                      <ion-row>
+                        <ion-col size="6" class="despesas">
+                          <p class="p"><ion-icon name="logo-google"></ion-icon>Servidor</p>
+                        </ion-col>
+                        <ion-col size="5" class="despesas">
+                          <p class="num">$30</p>
+                        </ion-col>
+                      </ion-row>
+                      <ion-row>
+                        <ion-col size="6" class="despesas">
+                          <p class="p"><ion-icon name="settings-sharp"></ion-icon>Manutenção</p>
+                        </ion-col>
+                        <ion-col size="5" class="despesas">
+                          <p class="num">$200</p>
+                        </ion-col>
+                      </ion-row>
+                      <h1>Próximos Pagamentos</h1>
+                      <p class="data">Data</p>
+                      <ion-row>
+                        <ion-col class="despesas" size="6">
+                          <p class="app"><img src="../../assets/img/Tela-dashboard/computer.png"
+                              alt="Aplicativos">Aplicativo</p>
+                        </ion-col>
+                        <ion-col size="5" class="despesas">
+                          <p class="num">$5350</p>
+                        </ion-col>
+                      </ion-row>
+                      <ion-row>
+                        <ion-col size="6" class="despesas">
+                          <p class="clt"><img src="../../assets/img/Tela-dashboard/id-card.png"
+                              alt="Funcionarios">Funcionarios</p>
+                        </ion-col>
+                        <ion-col size="5" class="despesas">
+                          <p class="num">$16000</p>
+                        </ion-col>
+                      </ion-row>
+                    </div>
+                  </ion-row>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row class="canva">
+          <ion-col size="8">
+            <canvas #myChart></canvas>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-row>
+</ion-content>
+
+<ion-modal [isOpen]="isModalOpen">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpen(false)">Cancelar</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <p>Nome do Curso:</p>
+      <ion-input label-placement="floating" placeholder="Insira o nome do Curso" [(ngModel)]="curso.nome"></ion-input>
+
+      <p>Categoria do Curso:</p>
+      <ion-input label-placement="floating" placeholder="Insira o nome do Curso" [(ngModel)]="curso.categoria"></ion-input>
+
+      <p>Valor do Curso:</p>
+      <ion-input label-placement="floating" placeholder="Insira o Valor do Curso" type="number" maxlenght="9" [(ngModel)]="curso.valor"></ion-input>
+
+      <p>Descrição do Curso:</p>
+      <ion-input label-placement="floating" placeholder="Insira a Descrição do Curso" type="text" [(ngModel)]="curso.descricao"></ion-input>
+
+        <p>Imagem do Curso:</p>
+        <ion-input type="file" (change)="onFileChange($event)"></ion-input>
+
+      <p>Localização do curso:</p>
+      <ion-button (click)="setOpen2(true)">Adicionar Endereço</ion-button>
+
+      <ion-button (click)="setOpen(false)" (click)="adicionarCursos()">Salvar</ion-button>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal [isOpen]="isModalOpen2">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpen2(false)">Cancelar</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <p>Cidade:</p>
+        <ion-input label-placement="floating" placeholder="Insira o nome da Cidade" [(ngModel)]="curso.localizacao.cidade" name="cidade"></ion-input>
+        <p>Bairro:</p>
+        <ion-input label-placement="floating" placeholder="Insira o nome do Bairro" [(ngModel)]="curso.localizacao.bairro" name="bairro"></ion-input>
+        <p>Rua:</p>
+        <ion-input label-placement="floating" placeholder="Insira o nome da Rua" [(ngModel)]="curso.localizacao.rua" name="rua"></ion-input>
+        <p>Cep:</p>
+        <ion-input label-placement="floating" placeholder="Insira o CEP" [(ngModel)]="curso.localizacao.cep" name="cep" type="number" maxlength="8"></ion-input>
+        <ion-select interface="popover" placeholder="Selecione o estado" [(ngModel)]="curso.localizacao.estado" name="estado">
+          <!-- Lista de estados -->
+          <ion-select-option value="AC">Acre (AC)</ion-select-option>
+          <!-- ... restantes omitidos para simplicidade -->
+          <ion-select-option value="TO">Tocantins (TO)</ion-select-option>
+        </ion-select>
+      <ion-button (click)="setOpen(false)" type="submit">Salvar</ion-button>
+    </ion-content>
+  </ng-template>
+</ion-modal>
