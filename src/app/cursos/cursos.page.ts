@@ -1,5 +1,8 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import Swiper from 'swiper';
+import { Router } from '@angular/router';
+import { query } from '@angular/animations';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-cursos',
@@ -7,6 +10,7 @@ import Swiper from 'swiper';
   styleUrls: ['./cursos.page.scss'],
 })
 export class CursosPage implements OnInit, AfterViewInit {
+
   cards_premium = [
     {
       id: 1,
@@ -112,11 +116,25 @@ export class CursosPage implements OnInit, AfterViewInit {
     }
   ];
 
-  constructor() {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit() {
     console.log(this.cards_premium);
     console.log(this.cards_free);
+
+
+    // Parâmetros para acessar o buscar cursos sem perder dados
+    this.route.queryParams.subscribe(params => {
+      const scrollTo = params['scrollTo'];
+      if (scrollTo) {
+        setTimeout(() => {
+          const element = document.getElementById(scrollTo);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 500); // Garante que o DOM já está renderizado
+      }
+    });
   }
 
   ngAfterViewInit() {
@@ -134,5 +152,34 @@ export class CursosPage implements OnInit, AfterViewInit {
     });
 
     console.log('Swiper inicializado:', swiper);
+  }
+
+  navegarAteSobre(sobre: string) {
+    this.router.navigate(['/home'], { queryParams: { scrollTo: sobre } });
+  }
+
+  navegarAtePlanos(planos: string) {
+    this.router.navigate(['/home'], { queryParams: { scrollTo: planos } });
+  }
+
+  navegarAteEstude(estude: string) {
+    this.router.navigate(['/home'], { queryParams: { scrollTo: estude } });
+  }
+
+  navegarAteHome(home: string) {
+    this.router.navigate(['/home'], { queryParams: { scrollTo: home } });
+  }
+
+  navegarAteDivulgue(divulgue: string) {
+    this.router.navigate(['/home'], { queryParams: { scrollTo: divulgue } });
+  }
+
+
+  // Rolar até a parte dos cursos
+  scrollToBuscar() {
+    const element = document.getElementById('buscar');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 }
