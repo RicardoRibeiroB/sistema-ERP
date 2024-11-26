@@ -3,12 +3,12 @@
     <ion-row class="header">
       <ion-col size="12" class="header-content">
         <img src="../../assets/img/logo/Logo com nome sem fundo.png" alt="LOGO" class="logo">
-        <ion-button fill="clear">Início</ion-button>
-        <ion-button fill="clear">Sobre</ion-button>
-        <ion-button fill="clear">Serviços</ion-button>
-        <ion-button fill="clear">Como funciona</ion-button>
-        <ion-button fill="clear" class="side-right">Buscar cursos</ion-button>
-        <ion-button fill="clear">Divulgue seu curso</ion-button>
+        <ion-button fill="clear" routerLink="/home">Início</ion-button>
+        <ion-button fill="clear" (click)="navegarAteSobre('sobre')">Sobre</ion-button>
+        <ion-button fill="clear" (click)="navegarAtePlanos('planos')">Planos</ion-button>
+        <ion-button fill="clear" (click)="navegarAteEstude('estude-conosco')">Estude Conosco</ion-button>
+        <ion-button fill="clear" class="side-right" (click)="scrollToBuscar()">Buscar cursos</ion-button>
+        <ion-button fill="clear" (click)="navegarAteDivulgue('divulgue')">Divulgue seu curso</ion-button>
         <ion-button fill="solid" color="transparent" class="button-open">Cadastre-se</ion-button>
       </ion-col>
     </ion-row>
@@ -28,7 +28,7 @@
       </div>
     </ion-row>
 
-    <ion-row class="courses-premium">
+    <ion-row class="courses-premium" id="buscar">
       <ion-col size="12">
         <h1>Premium:</h1>
       </ion-col>
