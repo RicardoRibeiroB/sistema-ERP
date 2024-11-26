@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonModal } from '@ionic/angular';
 import { OverlayEventDetail } from '@ionic/core/components';
-import { HttpClient } from '@angular/common/http';  // Já importado corretamente
+import { HttpClient } from '@angular/common/http';  // Importado corretamente
 import { Router } from '@angular/router';  
+import { Location } from '@angular/common'; // Importando Location para verificar a URL atual
 
 @Component({
   selector: 'app-usuarios',
@@ -39,7 +40,11 @@ export class UsuariosPage implements OnInit {
   };
 
   // Injete o HttpClient no construtor
-  constructor(private http: HttpClient, private router: Router) { }  // Correção: injeção do HttpClient e Router
+  constructor(
+    private http: HttpClient, 
+    private router: Router,
+    private location: Location // Injetando Location
+  ) { }
 
   logar() {
     if (!this.aluno.email || !this.aluno.senha) {
@@ -53,15 +58,12 @@ export class UsuariosPage implements OnInit {
           console.log('Login bem-sucedido:', response);
           alert('Login realizado com sucesso!');
   
-          // Fechar o modal antes de navegar
-          this.isModalOpen = false;
-  
-          // Verificar se já estamos na página 'home'
-          this.router.navigate(['/home']).then((nav) => {
-            if (!nav) {
-              console.log('Já está na página Home.');
-            } else {
+          // Redirecionar para a página home após o login bem-sucedido
+          this.router.navigate(['/home'], { skipLocationChange: true }).then((nav) => {
+            if (nav) {
               console.log('Navegação para Home realizada.');
+            } else {
+              console.log('Erro: já estamos na página Home.');
             }
           }).catch((err) => {
             console.error('Erro ao redirecionar para Home:', err);
@@ -77,7 +79,6 @@ export class UsuariosPage implements OnInit {
       });
   }
   
-  
 
   adicionarAlunos() {
     console.log(this.aluno);
@@ -90,13 +91,20 @@ export class UsuariosPage implements OnInit {
     })
       .then(resp => resp.json())
       .then(resp => {
-        console.log(resp);
+        console.log('Cadastro realizado com sucesso:', resp);
+        alert('Cadastro realizado com sucesso! Agora você será redirecionado para o login.');
+
+        // Redireciona para a tela de login automaticamente
+        this.activeDiv = 'div2';
+
+        // Iniciar login automático
+        this.logar();
       })
       .catch(erro => {
-        console.log(erro);
+        console.error('Erro no cadastro:', erro);
       })
-      .finally(() => {   
-        console.log('processo finalizado');
+      .finally(() => {
+        console.log('Processo de cadastro finalizado');
       });
   }
 
