@@ -38,7 +38,11 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },  {
+    path: 'pre-dash',
+    loadChildren: () => import('./pre-dash/pre-dash.module').then( m => m.PreDashPageModule)
   }
+
 ];
 
 @NgModule({
